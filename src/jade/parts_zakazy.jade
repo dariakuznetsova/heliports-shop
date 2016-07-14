@@ -1,0 +1,58 @@
+extends layouts/layout_parts
+
+block content
+    .lk.oformlenie_zakaza.wishlist.zakazy.table_modify2
+        h1 Личный кабинет
+        ul.menu-list
+            li
+                a(href='basket.html') Корзина
+            li
+                a(href='lk.html') Учетная запись
+            li.active-item
+                a(href='/') Wishlist
+            li
+                a(href='lk-zakazy.html') Заказы
+            li
+                a(href='#') Выход
+        ul.all_orders
+            li
+                a(href='#') Все заказы
+            li
+                a(href='#') История
+        .order_status
+            p Заказ&#160;
+                span №34
+                | от&#160;
+                span 21.02.2016
+            p Статус:&#160;&#160;
+                span Принят 21.02.2016
+        .left-block.tovary
+            .table_wrap
+                table
+                    tr
+                        th Артикул
+                        th Название
+                        th Цена
+                    tr.tovary-line-tr
+                        td.art
+                            a(href='#') RAM-B-166-AP14U
+                        td.name
+                            a(href='#') Редукторное масло SWEPCO 201 (1 Галлон)
+                        td.price 8 500 ₽
+                        td.quantity
+                            span 12
+                            | &#160;шт x&#160;
+                            span 8 500 ₽
+                        td.total-sum Итого:
+                            span 36 000 ₽
+
+            table.second_table
+                tr
+                    td Выбранный способ оплаты:
+                    td Наличными при получении
+                tr
+                    td Оплачен:
+                    td Нет
+                tr
+                    td Адрес доставки:
+                    td 142190

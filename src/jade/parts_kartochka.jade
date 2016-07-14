@@ -1,0 +1,158 @@
+extends layouts/layout_parts
+
+block content
+    .parts_kartochka
+        .back_link
+            a(href='#') —Вернуться в каталог
+        ul.breadcrumbs
+            li
+                a(href="#")
+                    img(src='img/heli-parts/heli-parts-blue.png')
+            li
+                a(href="#") Каталог
+            li
+                a(href='#') Запчасти для двигателей Lycoming (R44)
+            li.
+                ...
+
+        .photogallery-wrap
+            .left
+                .img.big_pic
+                    img(src='img/heli-parts/example.png' alt='')
+                ul.small_pic
+                    li
+                        img(src='img/heli-parts/example.png' alt='').first_pic_to_show
+                    li
+                        img(src='img/heli-parts/example.png' alt='')
+                    li
+                        img(src='img/heli-parts/example.png' alt='')
+                    li
+                        img(src='img/heli-parts/example.png' alt='')
+            .right
+                h1 Щетки стартер генератора
+                p.art Артикул:
+                    span 200SGL1009
+                p.price 490,88 €
+                p.quantity Кол-во:
+                input(type='text' value='1')
+                .more_less
+                    a(href='#') <
+                    a(href='#') >
+                .buttons
+                    a(href='#').to_basket В корзину
+                    a(href='#').quick_order Быстрый заказ
+                    a(href='#').like
+                        //img(src='img/heli-parts/heart.png' alt='like')
+                p Круглосуточный телефон
+                    br
+                    | в Москве
+                    span +7 495 77-000-77
+                .social Поделиться:
+                    a(href='#').icon-vkontakte
+                    a(href='#').icon-facebook
+                    a(href='#').icon-twitter
+                    a(href='#').icon-instagram
+                    a(href='#').icon-gplus
+
+        .review
+            h2 Обзор
+            p.
+                Барри Controls активно поддерживает общую авиарынок с 1981 года и имеет одобрения PMA на широком диапазоне крепления двигателя. Барри крепления имеют гарантию в течение 500 часов или 12 месяцев и художественного выдающимся качеством и стоимостью. Позвоните бирже номерами деталей.
+
+        .docs
+            h2 Документы
+            a(href='#' download) Барри Маунт Г.А. Приложения Плакат 2013-2014
+                img(src='img/heli-parts/pdf_icon.png' alt='pdf file')
+                span (1.6 МБ)
+            a(href='#' download) Инструкции для проверки Барри Controls
+                img(src='img/heli-parts/pdf_icon.png' alt='pdf file')
+                span (2 МБ)
+
+        .additional_info
+            h2 Доп. инфо
+            p.
+                Барри Controls активно поддерживает общую авиарынок с 1981 года и имеет одобрения PMA на широком диапазоне крепления двигателя. Барри крепления имеют гарантию в течение 500 часов или 12 месяцев и художественного выдающимся качеством и стоимостью. Позвоните бирже номерами деталей.
+
+        .what_else_to_buy
+            .left-block.tovary.zakazy
+                .table_wrap
+                    .title С этим товаром покупают:
+                    table
+                        tr
+                            th Артикул
+                            th Название
+                            th Кол-во
+                            th Цена
+                        tr.tovary-line-tr
+                            td.art
+                                a(href='#') RAM-B-166-AP14U
+                            td.name
+                                a(href='#') Редукторное масло SWEPCO 201 (1 Галлон)
+                            td.quantity
+                                input(type='text' value='1')
+                                .more_less
+                                    a(href='#') <
+                                    a(href='#') >
+                            td.price Под заказ
+                            td.add
+                                .delete
+                                    a(href='#').plus +
+                                    .wrap.show-hide
+                                        img(src='img/heli-parts/basket.png' alt='товар в корзине')
+                                        a(href='#').delete_from_basket Удалить
+                        tr.tovary-line-tr
+                            td.art
+                                a(href='#') RAM-B-166-AP14U
+                            td.name
+                                a(href='#') Редукторное масло SWEPCO 201 (1 Галлон)
+                            td.quantity
+                                input(type='text' value='1')
+                                .more_less
+                                    a(href='#') <
+                                    a(href='#') >
+                            td.price 45 000 ₽
+                            td.add
+                                .delete
+                                    a(href='#').plus +
+                                    .wrap.show-hide
+                                        img(src='img/heli-parts/basket.png' alt='товар в корзине')
+                                        a(href='#').delete_from_basket Удалить
+                        tr.tovary-line-tr
+                            td.art
+                                a(href='#') RAM-B-166-AP14U
+                                span.discount -30%
+                            td.name
+                                a(href='#') Редукторное масло SWEPCO 201 (1 Галлон)
+                            td.quantity
+                                input(type='text' value='1')
+                                .more_less
+                                    a(href='#') <
+                                    a(href='#') >
+                            td.price 126 000 ₽
+                            td.add
+                                .delete
+                                    a(href='#').plus +
+                                    .wrap.show-hide
+                                        img(src='img/heli-parts/basket.png' alt='товар в корзине')
+                                        a(href='#').delete_from_basket Удалить
+                        tr.tovary-line-tr
+                            td.art
+                                a(href='#') RAM-B-166-AP14U
+                            td.name
+                                a(href='#') Редукторное масло SWEPCO 201 (1 Галлон)
+                            td.quantity
+                                input(type='text' value='1')
+                                .more_less
+                                    a(href='#') <
+                                    a(href='#') >
+                            td.price 126 000 ₽
+                            td.add
+                                .delete
+                                    a(href='#').plus +
+                                    .wrap.show-hide
+                                        img(src='img/heli-parts/basket.png' alt='товар в корзине')
+                                        a(href='#').delete_from_basket Удалить
+
+
+
+

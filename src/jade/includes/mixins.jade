@@ -1,0 +1,86 @@
+mixin menu(menu)
+    ul&attributes(attributes)
+        each item in menu
+            li
+                a(href=item.href).bold.link.border #{item.name}
+                if item.items
+                    ul.hide-nav
+                        each sub in item.items
+                            li
+                                a(href=sub.href).link #{sub.name}
+
+
+mixin mmenu(menu)
+    ul&attributes(attributes)
+        each item in menu
+            li(class=typeof item.items === "undefined" ? "" : "submenu")
+                span
+                    if item.items
+                        a(href=item.href)
+                            u #{item.name}
+                        .caret
+                        ul
+                            each sub in item.items
+                                li
+                                    a(href=sub.href) #{sub.name}
+
+                    else
+                        a(href=item.href) #{item.name}
+
+
+mixin prod(pic)
+    .prod
+        .card
+            .prev-list
+                img(src="img/shop-prod-prev1.png").prev
+                img(src="img/shop-prod-prev2.png").prev
+                img(src="img/shop-prod-prev3.png").prev
+            a(href="#").img
+                img(src=pic)
+            h3
+                a(href="#") Толстовка<br> Russian Aviation
+            .prod-info
+                p Артикул <b>MA0116-513</b>
+                p 80% хлопок, 20% полиэстер
+
+            .offers-pic
+                | Цвета
+                .colors
+                    .color.active(style="background: url(img/shop-color1.png);background-size:cover;")
+                    .color(style="background: url(img/shop-color2.png);background-size:cover;")
+                    .color(style="background: url(img/shop-color3.png);background-size:cover;")
+            .offers-select
+                | Размер
+                select
+                    option XXXS
+                    option XXS
+                    option XS
+                    option S
+                    option M
+                    option L
+                    option XL
+                    option XXL
+                    option XXXL
+            .offers-purchase
+                fieldset
+                    span 8 500 ₽
+                    button(type='submit') В корзину
+                    img(src='./img/shop-favorite.png')
+
+
+mixin prod-card(pic)
+    .prod
+        a(href='#').card-shop
+            .img
+                img(src=pic)
+            h3 Поло Giallo
+            .prod-info
+                p Артикул <b>MA0116-513</b>
+                p Натуральная кожа
+
+            .offers-purchase
+                fieldset
+                    span 8 500 ₽
+                    button(type='submit') В корзину
+                    img(src='./img/shop-favorite.png')
+

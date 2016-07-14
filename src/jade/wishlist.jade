@@ -1,0 +1,65 @@
+extends layouts/layout_shop
+
+block content
+    .container
+        .lk.oformlenie_zakaza
+            h1 Личный кабинет
+            ul.menu-list
+                li
+                    a(href='basket.html') Корзина
+                li
+                    a(href='lk.html') Учетная запись
+                li.active-item
+                    a(href='/') Wishlist
+                li
+                    a(href='lk-zakazy.html') Заказы
+                li
+                    a(href='#') Выход
+
+            .left-block.tovary.wishlist
+                table
+                    tr
+                        td.img
+                            img(src='./img/shop-cat-4.png')
+                        td.name
+                            p Кеды Satorisan
+                            p арт: Pilot Vintage brown
+                        td.select
+                            .offers-select
+                                select
+                                    option XXXS
+                                    option XXS
+                                    option XS
+                                    option S
+                                    option M
+                                    option L
+                                    option XL
+                                    option XXL
+                                    option XXXL
+                        td.quantity
+                            a(href='#') —
+                            span 12
+                            a(href='#') +
+                        td.price 8 500 ₽
+                        td.close
+                            a(href='#').close-icon
+
+
+                .total-sum
+                    p Итого:
+                        span 36 000 ₽
+                .make_order
+                    .back_link
+                        a(href='#') — Вернуться в каталог
+                    button(type='submit') Оформить заказ
+
+
+
+
+
+            //    p 500 метров от МКАД по Новорижскому шоссе
+            //    p.last 8 (800) 707-44-77 (круглосуточно)
+            //    a(href='#') Схема проезда
+
+
+

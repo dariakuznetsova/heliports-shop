@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700&amp;subset=latin,cyrillic,latin-ext,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/template_styles.css">
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  </head>
+  <body>
+    <header class="container">
+      <div class="row">
+        <nav class="top-nav an">
+          <div class="col"><a href="/" class="logo logo-shop"></a></div>
+          <div class="col basket"><a href="#" class="bsk">
+              <div class="cnt">12</div></a>
+            <div class="price">256 000 ₽</div><a href="#" class="order">Оформить заказ</a>
+          </div>
+          <div class="col">
+            <div class="mini-menu"><a href="#">Вход</a><span>|</span><a href="#">Регистрация</a></div>
+            <!--.mini-menu
+            a(href="#") Профиль
+            span |
+            a(href="#") Whishlist
+            -->
+          </div>
+          <div class="col">
+            <div class="phone"><b>+7 (903) 744-27-70 <br></b><a class="yellow no-link">Заказать звонок</a></div>
+          </div>
+          <div class="col search">
+            <form>
+              <input name="q" type="text" placeholder="Поиск">
+              <input type="submit">
+            </form>
+          </div>
+        </nav>
+        <nav class="shop-menu an">
+          <ul>
+            <li><a href="#">Каталог</a></li>
+            <li><a href="#">Бренды</a></li>
+            <li><a href="#">Доставка и оплата</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="bg-color"></div>
+    <div class="container">
+      <div class="dostavka">
+        <h1>Доставка и оплата</h1>
+        <div class="info-block info1">
+          <h2>Курьерская доставка по Москве:</h2>
+          <p class="first-p">Доставка курьером по Москве осуществляется в день заказа или на следующий день.</p>
+          <p>Доставка в пределах МКАД:<span>450 рублей.</span></p>
+          <p>Доставка за пределы МКАД:<span>от 500 рублей.</span></p>
+        </div>
+        <div class="info-block info2">
+          <h2>Курьерская доставка по  России:</h2>
+          <p>Мы можем доставить товар до офиса транспортной компании, услугами которой Вы хотите воспользоваться. Если у Вас нет предпочтений,  товар может быть отправлен Вам с помощью курьерских служб:
+            <ul>
+              <li><img src="./img/pony.png"></li>
+              <li><img src="./img/ems.png"></li>
+              <li><img src="./img/delovye_linii.png"></li>
+              <li><img src="./img/pochta.png"></li>
+            </ul>
+          </p>
+          <p>и других.</p>
+        </div>
+        <div class="info-block info3">
+          <h2>Курьерская доставка по Москве зависит от веса и габаритов вашего заказа:</h2>
+          <p>Доставка курьером по Москве осуществляется в день заказа или на следующий день для габаритных заказов размером:</p>
+          <p class="yellow">не более 30x30x30 см. и весом не более 10 кг.</p>
+          <P>Заказы, превышающие указанные транспортные характеристики доставляются по отдельному согласованию с клиентом.</P>
+          <p class="title-p">Доставка заказов осуществляется по всей территории России.</p>
+          <p>После получения вашего заказа мы свяжемся с Вами и обсудим наиболее удобное время и способ доставки.</p>
+          <p>Оплата производится банковскими картами и наличными при получении, курьеру.</p>
+          <ul>
+            <li><img src="./img/visa.png"></li>
+            <li><img src="./img/mastercard.png"></li>
+            <li><img src="./img/ruble.png"></li>
+            <li><img src="./img/dollar.png"></li>
+            <li><img src="./img/euro.png"></li>
+          </ul>
+        </div>
+        <!--.info-block.find_us-->
+        <!--    p 500 метров от МКАД по Новорижскому шоссе-->
+        <!--    p.last 8 (800) 707-44-77 (круглосуточно)-->
+        <!--    a(href='#') Схема проезда-->
+        
+        
+      </div>
+    </div>
+    <video poster="img/design/sky.jpg" class="bg-video">
+      <source src="video/sky.webm" type="video/webm">
+      <source src="video/sky.mp4" type="video/mp4">
+      <source src="video/sky.ogv" type="video/ogg">
+    </video>
+    <div class="video-modal">
+      <video poster="img/design/sky.jpg" controls>
+        <source src="video/sky.webm" type="video/webm">
+        <source src="video/sky.mp4" type="video/mp4">
+        <source src="video/sky.ogv" type="video/ogg">
+      </video>
+    </div>
+    <div class="popup-window feedbackForm">
+      <p>Введите ваше имя и телефон.<br>Мы свяжемся с вами в ближайшее время.</p>
+      <form>
+        <div class="feed-error"></div>
+        <div class="feed-result"></div>
+        <div class="feed-body"></div>
+        <input type="text" placeholder="Ваше имя" class="feed-name your_name">
+        <input type="text" placeholder="+7(___)__-__-__" class="feed-phone your_tel">
+        <input type="hidden" class="feed-comment">
+        <button type="submit">Отправить</button>
+      </form>
+    </div>
+    <footer class="container an">
+      <hr>
+      <div class="foot">
+        <div class="col">
+          <p>500 метров от МКАД по Новорижскому шоссе<br>+7 (495) 77-000-77, 8 (800) 707-44-77 (круглосуточно)</p><a class="map">Схема проезда</a>
+        </div>
+        <div class="col social"><a class="icon-vkontakte"></a><a class="icon-facebook"></a><a class="icon-twitter"></a><a class="icon-instagram"></a><a class="icon-gplus"></a></div>
+        <div class="col search">
+          <form>
+            <input name="q" type="text" placeholder="Поиск">
+            <input type="submit">
+          </form>
+        </div>
+        <div class="col"><a href="#" class="site-selector"><img src="img/design/logorussia.png"></a></div>
+      </div><small>© 2016 Heliport Moscow</small>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>

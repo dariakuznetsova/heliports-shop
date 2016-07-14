@@ -1,0 +1,26 @@
+extends layout
+
+block content
+    .bg-color
+    .container.small-container
+        .main-content
+            h1 Аэротуризм
+            .row
+                .col-xs-9
+                    .row
+                        .col-xs-8
+                            P.no-margin Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet convallis dolor, nec dictum erat. Praesent eget lectus fermentum, consectetur metus sit amet, efficitur urna. Praesent interdum vitae eros et semper. Etiam quis nulla ut nulla pharetra luctus. Nam faucibus et arcu ac condimentum. Morbi ut faucibus nibh, nec commodo nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam a consequat odio.
+                            P Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet convallis dolor, nec dictum erat. Praesent eget lectus fermentum, consectetur metus sit amet, efficitur urna. Praesent interdum vitae eros et semper. Etiam quis nulla ut nulla pharetra luctus. Nam faucibus et arcu ac condimentum. Morbi ut faucibus nibh, nec commodo nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam a consequat odio.
+                    -for (var x = 0; x < 4; x++)
+                        section
+                            h2.thin Многодневные туры
+                            .row
+                                -for (var y = 0; y < 4; y++)
+                                    .col-xs-4.tourism-item
+                                        a.link.bold.title Прибалтика
+                                        .video-tourism
+                                            img(src="img/basic.jpg")
+                                        p.time 4 дня
+                                        .hidden-block
+                                            P Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet convallis dolor, nec dictum erat. Praesent eget lectus fermentum, consectetur metus sit amet, efficitur urna. Praesent interdum vitae eros et semper. Etiam quis nulla ut nulla pharetra luctus. Nam faucibus et arcu ac condimentum. Morbi ut faucibus nibh, nec commodo nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam a consequat odio.
+                                            a.link.btn.yellow.small Заказать

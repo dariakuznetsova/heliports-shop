@@ -1,0 +1,101 @@
+extends layouts/layout_russia
+
+block content
+    .container
+        .heliports-of-russia.contacts-russia
+            .col-xs-12.title
+                .col.col-xs-3
+                    h1 Контакты
+                .col.col-xs-6.search
+                    p info@heliports-russia.ru
+                        br
+                        span 8 (800) 707-44-77
+    .map-container
+        .map.yandex-map#map_contacts
+    script.
+        ymaps.ready(function () {
+            init_contacts(55.8, 37.8);
+        });
+        function init_contacts(c, d) {
+            var myMap2 = new ymaps.Map("map_contacts", {
+                        //center: [55.8, 37.8],
+                        center: [c, d],
+                        zoom: 10
+                    }, {
+                        searchControlProvider: 'yandex#search'
+                    }),
+
+                    myGeoObject2 = new ymaps.GeoObject({
+                        draggable: true
+                    });
+
+            myMap2.geoObjects
+                    .add(myGeoObject2)
+                    .add(new ymaps.Placemark([c, d], {}, {
+                        iconLayout: 'default#image',
+                        iconImageSize: [28, 37],
+                        iconImageHref: '../img/heli-icon-red.png'
+                    }))
+        }
+
+
+    .container
+        .heliports-of-russia.contacts-russia
+            .col-xs-12.cities-list
+                ul
+                    li.switch_city.cities-list-active
+                        span Москва
+                    li.switch_city
+                        span Истра
+                    li.switch_city
+                        span Реутов
+                    li.switch_city
+                        span Ульяновск
+                    li.switch_city
+                        span Калуга
+                    li.switch_city
+                        span Краснодар
+                    li.switch_city
+                        span Новосибирск
+                    li.switch_city
+                        span Брянск
+                    li.switch_city
+                        span Тюмень
+                    li.switch_city
+                        span Самара
+
+            .col-xs-12.address
+                .col.col-xs-6
+                    img(src='img/heli-moscow-big.png' alt='лого')
+                .col.col-xs-6.search
+                    a(href='http://www.heliport-moscow.ru/' target='_blank') www.heliport-moscow.ru
+                    p
+                        | +7(495) 77-000-77 | 8(800) 707-44-77
+                        br
+                        span Схема проезда
+                        br
+                        | Частота 126.7, позывной "Рублево"
+
+            .col-xs-12.video-block
+                .col.col-xs-6
+                    .info-block.info1
+                        p.
+                            Это флагманский центр проекта «Хелипорты России» по созданию крупнейшего в Европе вертолётного мультифункционального комплекса, рассчитанного на базирование более 200 единиц авиационной техники.
+                        p.
+                            «Хелипорт Москва» был открыт в конце 2013 года. Всего за год компания смогла добиться впечатляющих результатов, совершив более 5000 вылетов по разным направлениям и приняв участие в нескольких грандиозных вертолётных экспедициях. На данный момент комплекс существует в light-версии и является полноценным вертолётным центром, осуществляющим широкий спектр услуг в сфере малой гражданской авиации, начиная от аэротакси, продажи и аренды авиатехники, заканчивая квалифицированным обслуживанием и обучением пилотов-любителей.
+                        p.
+                            «Хелипорт Москва» обладает крупнейшим собственным вертолётным парком, в составе которого только новые модели вертолёты ведущих мировых производителей: Bell, AirbusHelicopters, Robinson, AgustaWestland. На территории комплекса есть авиационная техническая база, собственный склад запчастей и отапливаемые ангары с возможностью всесезонного хранения техники. Компания предлагает услуги по покупке и аренде вертолётов, а также эксклюзивные условия кредитования, лизинга и страхования.
+                .col.video.col-xs-6
+                    a(href='#').video_link
+                        img(src='img/helicopter.png')
+                        img.icon(src='img/video-icon.png')
+
+                .video-modal
+                    video(poster="img/design/sky.jpg", controls)
+                        source(src="video/sky.webm", type="video/webm")
+                        source(src="video/sky.mp4", type="video/mp4")
+                        source(src="video/sky.ogv", type="video/ogg")
+
+
+
+

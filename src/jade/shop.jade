@@ -1,0 +1,190 @@
+extends layouts/layout_shop
+
+block content
+    .bg-color
+    .container
+        .shop-slider
+            .slide
+                img(src="img/shop-promoslider.png")
+            .slide
+                img(src="img/shop-promoslider.png")
+            .slide
+                img(src="img/shop-promoslider.png")
+
+
+        .section-list
+            .section
+                // или a(href="#").img
+                .img
+                    img(src="img/shop-cat-1.png").bottom
+                h2
+                    a(href="#") Мужчинам
+
+                ul
+                    li: a(href="#") Бейсболки, шапки, шлемы
+                    li: a(href="#") Толстовки, свитеры, джемперы
+                    li: a(href="#") Брюки, шорты, бермуды
+                    li: a(href="#") Куртки, ветровки, блейзеры
+                    li: a(href="#") Поло, футболки
+
+            .section
+                .img
+                    img(src="img/shop-cat-2.png").bottom
+                h2
+                    a(href="#") Женщинам
+
+                ul
+                    li: a(href="#") Бейсболки, шапки, шлемы
+                    li: a(href="#") Толстовки, свитеры, джемперы
+                    li: a(href="#") Брюки, шорты, бермуды
+                    li: a(href="#") Куртки, ветровки, блейзеры
+                    li: a(href="#") Поло, футболки
+
+            .section
+                .img
+                    img(src="img/shop-cat-3.png").bottom
+                h2
+                    a(href="#") Детям
+
+                ul
+                    li: a(href="#") Бейсболки, шапки, шлемы
+                    li: a(href="#") Толстовки, свитеры, джемперы
+                    li: a(href="#") Брюки, шорты, бермуды
+                    li: a(href="#") Куртки, ветровки, блейзеры
+                    li: a(href="#") Поло, футболки
+
+            .section
+                .img
+                    img(src="img/shop-cat-4.png")
+                h2
+                    a(href="#") Мужчинам
+
+                ul
+                    li: a(href="#") Бейсболки, шапки, шлемы
+                    li: a(href="#") Толстовки, свитеры, джемперы
+                    li: a(href="#") Брюки, шорты, бермуды
+                    li: a(href="#") Куртки, ветровки, блейзеры
+                    li: a(href="#") Поло, футболки
+
+            .section
+                .img
+                    img(src="img/shop-cat-5.png")
+                h2
+                    a(href="#") Мужчинам
+
+                ul
+                    li: a(href="#") Бейсболки, шапки, шлемы
+                    li: a(href="#") Толстовки, свитеры, джемперы
+                    li: a(href="#") Брюки, шорты, бермуды
+                    li: a(href="#") Куртки, ветровки, блейзеры
+                    li: a(href="#") Поло, футболки
+
+            .section
+                .img
+                    img(src="img/shop-cat-6.png")
+                h2
+                    a(href="#") Мужчинам
+
+                ul
+                    li: a(href="#") Бейсболки, шапки, шлемы
+                    li: a(href="#") Толстовки, свитеры, джемперы
+                    li: a(href="#") Брюки, шорты, бермуды
+                    li: a(href="#") Куртки, ветровки, блейзеры
+                    li: a(href="#") Поло, футболки
+
+            .section
+                .img
+                    img(src="img/shop-cat-7.png")
+                h2
+                    a(href="#") Сувениры
+
+                ul
+                    li: a(href="#") Бейсболки, шапки, шлемы
+                    li: a(href="#") Толстовки, свитеры, джемперы
+                    li: a(href="#") Брюки, шорты, бермуды
+                    li: a(href="#") Куртки, ветровки, блейзеры
+                    li: a(href="#") Поло, футболки
+
+            .section
+                .img
+                    img(src="img/shop-cat-8.png")
+                h2
+                    a(href="#") Активный отдых
+
+                ul
+                    li: a(href="#") Бейсболки, шапки, шлемы
+                    li: a(href="#") Толстовки, свитеры, джемперы
+                    li: a(href="#") Брюки, шорты, бермуды
+                    li: a(href="#") Куртки, ветровки, блейзеры
+                    li: a(href="#") Поло, футболки
+
+        h2.catalog-header Популярные товары
+        .catalog-top
+            +prod("img/shop-prod1.png")
+            +prod("img/shop-prod-2.png")
+            +prod("img/shop-prod1.png")
+            +prod("img/shop-prod3.png")
+
+
+        h2.catalog-header Новые поступления
+        .catalog-top
+            +prod("img/shop-prod3.png")
+            +prod("img/shop-prod1.png")
+            +prod("img/shop-prod-2.png")
+            +prod("img/shop-prod3.png")
+        //.main-content
+        //    .shop-filter
+        //        .check-container
+        //            input#name-1(type='checkbox')
+        //            label(for='name-1') Robinson
+        //        .check-container
+        //            input#name-2(type='checkbox')
+        //            label(for='name-2') Robinson
+        //        .check-container
+        //            input#name-3(type='checkbox')
+        //            label(for='name-3') Robinson
+        //        .check-container
+        //            input#name-4(type='checkbox')
+        //            label(for='name-4') Robinson
+        //        .check-container
+        //            input#name-5(type='checkbox')
+        //            label(for='name-5') Robinson
+        //        .check-container
+        //            input#name-6(type='checkbox')
+        //            label(for='name-6') Robinson
+        //    h1 Robinson
+        //    .row
+        //    -for(var x = 0; x < 14; x++)
+        //        .col-xs-6.shop-item
+        //            .row
+        //                .col-xs-6
+        //                    img(src='img/heli.png')
+        //                .col-xs-6
+        //                    a.link.bold.title(href='/html/catalog.element-prototype.html') Robinson R44 Raven I
+        //                    p   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ex tellus, rhoncus eu mattis ac, eleifend et leo. ivamus a justo risus. Ut cursus nunc libero, in porttitor magna commodo sit amet.
+        //                    .icons
+        //                        p.time-icon.bold 1 + 3
+        //                        p.time-icon.bold 240 км/ч
+        //                        p.time-icon.bold 619 км
+        //                    p.bold.big.yellow.price от 616 000 $
+        .brands-wrap
+            p Бренды
+            .brand-logos
+                .img-wrap
+                    img(src='./img/pic1.png')
+                .img-wrap
+                    img(src='./img/pic2.png')
+                .img-wrap
+                    img(src='./img/pic1.png')
+                .img-wrap
+                    img(src='./img/pic2.png')
+                .img-wrap
+                    img(src='./img/pic1.png')
+                .img-wrap
+                    img(src='./img/pic2.png')
+                .img-wrap
+                    img(src='./img/pic1.png')
+                .img-wrap
+                    img(src='./img/pic2.png')
+                .img-wrap
+                    img(src='./img/pic1.png')

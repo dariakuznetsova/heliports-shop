@@ -1,0 +1,209 @@
+{
+  "_comment":   "Тут можно сохранить данные которые потом будут использоваться в jade",
+  "__comment":  "Имя файла должно совпадать с шаблоном в который мы это передаем",
+  "___comment": "default грузится в дополнение к остальным не найден с именем файла",
+  "menu":       [
+    {
+      "name": "Обучение пилотированию",
+      "href": "/html/learning.html"
+    },
+    {
+      "name": "Аренда вертолетов",
+      "href": "/html/home.html"
+    },
+    {
+      "name": "Ознакомительные полеты",
+      "href": "/html/tourism.html"
+    },
+    {
+      "name": "Продажа вертолетов",
+      "href": "/html/tourism.html"
+    },
+    {
+      "name":  "Услуги комплекса",
+      "href":  "/html/services.html",
+      "items": [
+        {
+          "name": "ПО и сервис",
+          "href": "/html/services.html"
+        },
+        {
+          "name": "Заправка",
+          "href": "/html/services.html"
+        },
+        {
+          "name": "Страхование",
+          "href": "/html/services.html"
+        },
+        {
+          "name": "Лизинг",
+          "href": "/html/services.html"
+        },
+        {
+          "name": "Регистрация и сертификация",
+          "href": "/html/services.html"
+        },
+        {
+          "name": "Тюнинг",
+          "href": "/html/services.html"
+        },
+        {
+          "name": "Базирование",
+          "href": "/html/services.html"
+        },
+        {
+          "name": "Запчасти",
+          "href": "/html/home.html"
+        }
+      ]
+    },
+    {
+      "name": "Аэротуризм",
+      "href": "/html/tourism.html"
+    },
+    {
+      "name": "Маршруты",
+      "href": "/html/home.html"
+    },
+    {
+      "name":  "О проекте",
+      "href":  "/html/about.html",
+      "items": [
+        {
+          "name": "О нас",
+          "href": "/html/about.html"
+        },
+        {
+          "name": "Бутик",
+          "href": "/html/home.html"
+        },
+        {
+          "name": "Нашим пилотам",
+          "href": "/html/pilots.html"
+        },
+        {
+          "name": "Маршруты",
+          "href": "/html/routes.html"
+        },
+        {
+          "name": "Автодромы",
+          "href": "/html/home.html"
+        },
+        {
+          "name": "Видео",
+          "href": "/html/video.html"
+        },
+        {
+          "name": "Фотогалерея",
+          "href": "/html/home.html"
+        },
+        {
+          "name": "Пресса",
+          "href": "/html/press.html"
+        },
+        {
+          "name": "Статьи",
+          "href": "/html/articles.html"
+        },
+        {
+          "name": "Аэроклуб",
+          "href": "/html/airclub.html"
+        },
+        {
+          "name": "Вакансии",
+          "href": "/html/vacancies.html"
+        },
+        {
+          "name": "FAQ",
+          "href": "/html/faq.html"
+        }
+      ]
+    },
+    {
+      "name": "Пилотам",
+      "href": "/html/home.html"
+    }
+  ],
+  "products":   [
+    {
+      "name":      "Robinson",
+      "img":       "shop_heli1.png",
+      "hover_img": "shop_heli1.png",
+      "variants":[
+        {
+          "name":"R44 Raven I",
+          "price": "от 616 000 $"
+        },
+        {
+          "name":"R44 Raven II",
+          "price": "от 732 000 $"
+        },
+        {
+          "name":"R66 Turbine",
+          "price": "от 1 340 000 $"
+        }
+      ]
+    },
+    {
+      "name":      "EUROCOPTER",
+      "img":       "shop_heli2.png",
+      "hover_img": "shop_heli2.png",
+      "variants":[
+        {
+          "name":"EC120 B",
+          "price": "от 2 011 150 €"
+        },
+        {
+          "name":"AS350 В3E",
+          "price": "от 3 349 500 €"
+        },
+        {
+          "name":"EC130 T2",
+          "price": "от 4 128 150 €"
+        },
+        {
+          "name":"AS355 NP",
+          "price": "от 1 340 000 $"
+        }
+      ]
+    },
+    {
+      "name":      "BELL HELICOPTER",
+      "img":       "shop_heli3.png",
+      "hover_img": "shop_heli3.png",
+      "variants":[
+        {
+          "name":"Bell 407",
+          "price": "от 2 011 150 €"
+        },
+        {
+          "name":"Bell 429",
+          "price": "от 3 349 500 €"
+        }
+      ]
+    },
+    {
+      "name":      "AGUSTA WESTLAND",
+      "img":       "shop_heli4.png",
+      "hover_img": "shop_heli4.png",
+      "variants":[
+        {
+          "name":"AW119ke",
+          "price": "от 2 011 150 €"
+        },
+        {
+          "name":"AW109 Power",
+          "price": "от 3 349 500 €"
+        },
+        {
+          "name":"AW109 Grand NEW",
+          "price": "от 4 128 150 €"
+        },
+        {
+          "name":"AW139",
+          "price": "от 1 340 000 $"
+        }
+      ]
+    }
+  ]
+}

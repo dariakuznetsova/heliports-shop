@@ -1,0 +1,100 @@
+extends layouts/layout_russia
+
+block content
+    .container
+        .our_services.kartochka.prodazha
+            .col-sidebar
+                h1 Услуги
+                ul.side-bar
+                    li
+                        a(href="/html/about.html").switch-sidebar-link.link.bold.active-sidebar-link Аренда
+                    li
+                        a(href="/html/about.html").switch-sidebar-link.link.bold ТО и Сервис
+                    li
+                        a(href="/html/pilots.html").switch-sidebar-link.link.bold Заправка
+                    li
+                        a(href="/html/routes.html").switch-sidebar-link.link.bold Страхование
+                    li
+                        a(href="/html/video.html").switch-sidebar-link.link.bold Лизинг
+                    li
+                        a(href="/html/about.html").switch-sidebar-link.link.bold Обучение
+                    li
+                        a(href="/html/press.html").switch-sidebar-link.link.bold Продажа вертолетов
+            .main_content
+                .wrap-for-rent.business-russia
+                    h2 Продажа вертолетов
+                    form
+                        ul
+                            - var heli = ['Robinson', 'Eurocopter', 'Bell Helicopter', 'Agusta Westland', 'Вертолеты в наличии', 'Ресурсные вертолеты']
+                            each item in heli
+                                li
+                                    label
+                                        input(type="checkbox").checked_elem
+                                        .checkbox-fake
+                                        = item
+
+                    .other-heli
+                        h2 Robinson
+                        ul
+                            li
+                                img(src='img/other_heli.png' alt='другие вертолеты в наличии')
+                                .info
+                                    .title
+                                        a(href='@') Robinson R44 Raven I
+                                    p Легкий многоцелевой вертолет Robinson R44 Raven I рассчитан на четырех человек - трех пассажиров и одного пилота. Это простое в эксплуатации транспортное средство надежно, что подтверждает мировая статистика. В серийном выпуске вертолет уже более 17-ти лет, за это время работа его систем многократно...
+                                    ul.other-details
+                                        li 1+3
+                                        li 240 км/ч
+                                        li 619 км
+                                    p.price от 616 000 $
+                            li
+                                img(src='img/other_heli.png' alt='другие вертолеты в наличии')
+                                .info
+                                    .title
+                                        a(href='#') Robinson R44 Raven I
+                                    p Легкий многоцелевой вертолет Robinson R44 Raven I рассчитан на четырех человек - трех пассажиров и одного пилота. Это простое в эксплуатации транспортное средство надежно, что подтверждает мировая статистика. В серийном выпуске вертолет уже более 17-ти лет, за это время работа его систем многократно...
+                                    ul.other-details
+                                        li 1+3
+                                        li 240 км/ч
+                                        li 619 км
+                                    p.price от 616 000 $
+                            li
+                                img(src='img/other_heli.png' alt='другие вертолеты в наличии')
+                                .info
+                                    .title
+                                        a(href='#') Robinson R44 Raven I
+                                    p Легкий многоцелевой вертолет Robinson R44 Raven I рассчитан на четырех человек - трех пассажиров и одного пилота. Это простое в эксплуатации транспортное средство надежно, что подтверждает мировая статистика. В серийном выпуске вертолет уже более 17-ти лет, за это время работа его систем многократно...
+                                    ul.other-details
+                                        li 1+3
+                                        li 240 км/ч
+                                        li 619 км
+                                    p.price от 616 000 $
+                            li
+                                img(src='img/other_heli.png' alt='другие вертолеты в наличии')
+                                .info
+                                    .title
+                                        a(href='#') Robinson R44 Raven I
+                                    p Легкий многоцелевой вертолет Robinson R44 Raven I рассчитан на четырех человек - трех пассажиров и одного пилота. Это простое в эксплуатации транспортное средство надежно, что подтверждает мировая статистика. В серийном выпуске вертолет уже более 17-ти лет, за это время работа его систем многократно...
+                                    ul.other-details
+                                        li 1+3
+                                        li 240 км/ч
+                                        li 619 км
+                                    p.price от 616 000 $
+    .be_a_pilot
+        .container
+            h2
+                a(href='#') Стань пилотом
+            ul
+                li
+                    a Мастер-курс
+                    p 30 мин теории | 30 мин практики
+                    span 35 000 ₽
+                li
+                    a Мастер-курс
+                    p 30 мин теории | 30 мин практики
+                    span 35 000 ₽
+                li
+                    a Мастер-курс
+                    p 30 мин теории | 30 мин практики
+                    span 35 000 ₽
+

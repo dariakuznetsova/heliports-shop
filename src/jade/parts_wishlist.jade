@@ -1,0 +1,60 @@
+extends layouts/layout_parts
+
+block content
+    .lk.oformlenie_zakaza.wishlist.table_modify1
+        h1 Личный кабинет
+        ul.menu-list
+            li
+                a(href='basket.html') Корзина
+            li
+                a(href='lk.html') Учетная запись
+            li.active-item
+                a(href='/') Wishlist
+            li
+                a(href='lk-zakazy.html') Заказы
+            li
+                a(href='#') Выход
+
+        .left-block.tovary
+            table
+                tr
+                    th Артикул
+                    th Название
+                tr.tovary-line-tr
+                    td.art
+                        a(href='#') RAM-B-166-AP14U
+                    td.name
+                        a(href='#') Редукторное масло SWEPCO 201 (1 Галлон)
+                    td.quantity
+                        a(href='#') —
+                        input(type='text' value='1')
+                        a(href='#') +
+                    td.price 8 500 ₽
+                    td.close
+                        a(href='#').close-icon
+                    td.add_to_basket
+                        button В корзину
+                tr.tovary-line-tr
+                    td.art
+                        a(href='#') RAM-B-166-AP14U
+                    td.name
+                        a(href='#') Редукторное масло SWEPCO 201 (1 Галлон)
+                    td.quantity
+                        a(href='#') —
+                        input(type='text' value='12')
+                        a(href='#') +
+                    td.price 8 500 ₽
+                    td.close
+                        a(href='#').close-icon
+                    td.add_to_basket
+                        button В корзину
+
+
+
+            .total-sum
+                p Итого:
+                    span 36 000 ₽
+                button(type='submit') Все в корзину
+            .make_order
+                .back_link
+                    a(href='#') — Вернуться в каталог

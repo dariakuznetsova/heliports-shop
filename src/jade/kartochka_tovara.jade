@@ -1,0 +1,113 @@
+extends layouts/layout_shop
+
+block content
+    .bg-color
+    .container.catalogue.shop-kartochka
+
+        .row.tovar-loupe
+            ul.breadcrumbs
+                li
+                    a(href="#")
+                        img(src='img/shop-breadcrumps-home.png')
+                li
+                    a(href="#") Каталог
+                li
+                    a(href='#') Обувь
+                li
+                    a(href='#') ...
+
+            .col-xs-8
+                .gallery-wrap
+                    .big_pic
+                        a(href='').wrap_loupe
+                            img(src='img/tovar1.png' alt='')
+                    ul.small_pic
+                        li
+                            img(src='img/tovar1.png' alt='').first_pic_to_show
+                        li
+                            img(src='img/tovar1.png' alt='')
+                        li
+                            img(src='img/boots.png' alt='')
+
+
+
+            .detailed-info.col-xs-4
+                h1 Кеды Satorisan
+                    p Suede Saxony Blue
+                p.art Артикул:
+                    span 141007/P16 Suede Saxony
+                p.colors Цвета:
+                ul.colors-list
+                    li.active_color
+                        a(href='#')
+                    li
+                        a(href='#')
+                    li
+                        a(href='#')
+                p.price 8 500 Р
+                    a(href='#')
+                        img(src='img/shop-favorite.png' alt='')
+                .select
+                    .offers-select
+                        select
+                            option Выберете размер
+                            option 38
+                            option 39
+                            option 40
+                    a(href='#') Определить размер
+                .to_basket
+                    a(href='#').to_basket_link В корзину
+                    a(href='#').quick_order Быстрый заказ
+                table
+                    tr
+                        td Сезон:
+                        td мульти
+                    tr
+                        td Коллекция:
+                        td весна-лето
+                    tr
+                        td Детали обуви:
+                        td 3D текстура
+                    tr
+                        td Материал верха:
+                        td кожа
+                    tr
+                        td Внутренний материал:
+                        td кожа
+                    tr
+                        td Материал стельки:
+                        td кожа
+                    tr
+                        td Материал подошвы:
+                        td искусс. материал
+                p.about О товаре
+                p.
+                    Мужские кроссовки Nike AIR MAX CRUSHER 2 выполнены из натурального нубука, полимера и "дышащего" текстиля. Конструкция верха гарантирует необходимую поддержку. Амортизационная система Max Air на основе воздушных вставок помогает справиться с ударными нагрузками, обеспечивая амортизацию и защиту. Детали: шнуровка; текстильная подкладка и стелька.
+                .social Поделиться:
+                    a(href='#').icon-vkontakte
+                    a(href='#').icon-facebook
+                    a(href='#').icon-twitter
+                    a(href='#').icon-instagram
+                    a(href='#').icon-gplus
+
+
+
+
+            .main-content.col-xs-12
+
+                .products-wrap
+                    .title Похожие модели
+                    .catalog-section
+                        +prod-card("img/tovar1.png")
+                        +prod-card("img/tovar1.png")
+                        +prod-card("img/tovar1.png")
+                        +prod-card("img/tovar1.png")
+                    .title Похожие модели
+                    .catalog-section
+                        +prod-card("img/tovar1.png")
+                        +prod-card("img/tovar1.png")
+                        +prod-card("img/tovar1.png")
+                        +prod-card("img/tovar1.png")
+
+
+

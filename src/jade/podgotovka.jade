@@ -1,0 +1,136 @@
+extends layouts/layout_russia
+
+block content
+    .container
+        .our_services.podgotovka
+            .col-sidebar.col-xs-2
+                h1 Услуги
+                ul.side-bar
+                    li
+                        a(href="/html/about.html").link.bold.active-sidebar-link Аренда
+                    li
+                        a(href="/html/about.html").link.bold ТО и Сервис
+                    li
+                        a(href="/html/pilots.html").link.bold Заправка
+                    li
+                        a(href="/html/routes.html").link.bold Страхование
+                    li
+                        a(href="/html/video.html").link.bold Лизинг
+                    li
+                        a(href="/html/about.html").link.bold Обучение
+                    li
+                        a(href="/html/press.html").link.bold Продажа вертолетов
+            .main_content.col-xs-10
+                h2 Первоначальная подготовка
+                img(src='img/heli-robinson.png' alt='robinson helicopter')
+                .col-xs-12.short_info
+                    .col-xs-5.left_col
+                        span.price 1 634 000 ₽
+                    .col-xs-6.right_col
+                        table
+                            tr
+                                td Летная подготовка:
+                                td не менее 43 часов
+                            tr
+                                td Теоретические знания:
+                                td 232 часа
+                            tr
+                                td Зачет-экзамен:
+                                td 15 ч
+                .col-xs-12.goals
+                    .col-xs-5.left_col
+                        .title Цель обучения:
+                    .col-xs-6.right_col
+                        p Эта программа позволит вам получить знания и навыки для самостоятельного управления вертолётом Robinson R44 в качестве КВС.
+                .col-xs-12.about_course
+                    .col-xs-5.left_col
+                        .title Вы с легкостью пройдете все необходимые теоретические разделы курса благодаря нашим опытным инструкторам.
+                    .col-xs-6.right_col
+                        p Продолжительность занятий 232 часа, в которые входят:
+                        ul
+                            li Практическая аэродинамика
+                            li Конструкция вертолета
+                            li Конструкция двигателя
+                            li Электрооборудование
+                            li Приборное оборудование
+                            li Радиооборудование
+                            li Руководство по летной эксплуатации
+                            li Воздушная навигация - Вертолетовождение
+                            li Ведение радиосвязи и фразеология АССП и его размещение на ВС
+                            li Авиационная метеорология
+                            li Авиационная медицина
+                            li Документы, регламентирующие летную работу
+                    .col-xs-12.gallery-slider
+                        .img_wrap
+                            .img
+                                img.img-gallery.active_img(src='img/podgotovka-slider.png' alt='галерея')
+                                img.img-gallery(src='img/podgotovka-slider.png' alt='галерея')
+                                img.img-gallery(src='img/podgotovka-slider.png' alt='галерея')
+                                img.img-gallery(src='img/podgotovka-slider.png' alt='галерея')
+                            a(href='#').prev
+                            a(href='#').next
+                        .register
+                            a(href='#') Записаться на курс
+                .col-xs-12.our_pilots
+                    .col-xs-12.title Наши пилоты
+                    .col-xs-5.left_col
+                        p Каждый пилот имеет летный стаж 7 000 часов, и поможет изучить программу упражнений. Вам предоставляется 40 часов, чтобы с увереностью выполнять:
+                    .col-xs-6.right_col
+                        ul
+                            li Полеты на висение, перемещения и развороты у земли
+                            li Полеты по кругу
+                            li Полеты в пилотажной зоне
+                            li ПОлеты по маршруту
+                            li Полеты на отработку действий командира ВС при попадании в аварийные ситуации полета
+                    .col-xs-12.pilots-list
+                        -for(var x = 0; x < 4; x++)
+                            .col-xs-6.pilots_item
+                                .img
+                                    img(src='img/pilot1.png' alt='наш пилот')
+                                .info
+                                    .name Соловьев Виталий Анатольевич
+                                    p
+                                        | 1972 год рождения
+                                        br
+                                        | Общий налет: более 5000 часов
+                                        br
+                                        | Образование: Сызранское авиационное летное училище
+                                        br
+                                        | 1995 год
+                                        br
+                                        | Освоенные вертолеты: Robinson R44, Robinson R66, Airbus Helicopter H125, Bell 407, Agusta Westland 119, Ми-24, Ми-8
+                .col-xs-12.about_helicopter
+                    .col-xs-6.left_col
+                        .title Robinson R44
+                        p Первый вертолет с газотурбинным двигателем в линейке Robinson. Мощный высокопроизводительный двигатель Rolls-Royce RR300 был разработан специально для Robinson R66 turbine. Helicopter Company позаботилась о комфорте и безопасности пассажиров. Хорошую видимость обеспечивает отсутствие перегородки между сиденьями. Вертолет обладает отличными летно-техническими характеристиками и улучшенными показателями скорости набора высоты.
+                    .col-xs-6.right_col
+                        img(src='img/pilots-heli.png' alt='вертолет')
+                .col-xs-12.our_pilots
+                    .col-xs-5.left_col
+                        p По окончании программы обучения выдаётся свидетельство о прохождении «Программы первоначальной подготовки частных пилотов на вертолёт Robinson R66», для получения в ВКК (ТКК) ФАВТ Росавиация свидетельства пилота любителя гражданской авиации (ГА).
+                        .become_a_pilot
+                            a(href='#') Стать пилотом
+                    .col-xs-6.right_col
+                        .title Необходимые документы:
+                        ul
+                            li Копия паспорта
+                            li Копия диплома об образовании
+                                br
+                                | (не ниже среднего)
+                            li Медицинская справка о прохождении ВЛЭК
+                            li Фотографии 4x5, 4 шт. (цветные, матовые, без уголков, в костюме)
+                    .col-xs-12.title.refs Отзывы
+                    .col-xs-12.pilots-list
+                        -for(var x = 0; x < 4; x++)
+                            .col-xs-6.pilots_item
+                                .img
+                                    img(src='img/jerard.png' alt='Отзыв')
+                                .info
+                                    .name Джерард Батлер
+                                    .who_is Голливудский актер
+                                    p Для деловой поездки, загородного полета или романтической вертолетной прогулки по Подмосковью мы разработаем индивидуальный маршрут, ориентируясь на Ваши пожелания. Где можно покататься на вертолете в знаменательный день, как арендовать вертолет для загородного отдыха, каким образом организовать деловой перелет – узнайте у специалистов Heliport Moscow.
+
+                .col-xs-12.last-block
+                    p Программа первоначальной подготовки пилотов на Robinson R44. Вы любите небо и хотите самостоятельно научиться управлять винтокрылой машиной?
+                    .yes_button
+                        a(href='#') Да

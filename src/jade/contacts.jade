@@ -1,0 +1,57 @@
+extends layouts/layout_shop
+
+block content
+    .container
+        .contacts
+            h1 Контакты
+            .left-block
+                .map
+                    #map_shop
+                script.
+                    ymaps.ready(function () {
+                        init_contacts(55.8, 37.8);
+                    });
+                    function init_contacts (c,d) {
+                        var myMap2 = new ymaps.Map("map_shop", {
+                                center: [55.80896904881843,37.39338516529843],
+                                zoom: 15
+                            }, {
+                                searchControlProvider: 'yandex#search'
+                            }),
+
+                            myGeoObject2 = new ymaps.GeoObject({
+                                draggable: true
+                            });
+
+                        myMap2.geoObjects
+                            .add(myGeoObject2)
+                            .add(new ymaps.Placemark([c, d], {
+                            }, {
+                                iconLayout: 'default#image',
+                                iconImageSize: [28, 37],
+                                iconImageHref: '../img/heli-icon-red.png'
+                            }))
+                    }
+                .print_button
+                    a(href='javascript:window.print()').print__link Распечатать
+
+            .right-block
+                p
+                    | 500 метров по МКАД по Новорижскому шоссе
+                    br
+                    | Круглосуточный телефон:
+                    span +7 (495) 77-000-77 (2118)
+                p Часы работы:
+                    span с 9:00 до 21:00
+                p Бесплатный трансфер от:
+                p Строгино (каждый день с 9:00 до 20:00)
+                p
+                    img(src='./img/autobus.png' alt='Автобус Heliport')
+                p
+                    | Не забудьте согласовать свой заказ.
+                    br
+                    | Это можно сделать, связавшись с администрацией
+                    br
+                    | Хелипорт Москва по телефону:
+                    span +7(495) 77 000 77.
+

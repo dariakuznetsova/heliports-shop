@@ -1,0 +1,41 @@
+
+.flyhere(@duration:0.5s,@delay:1s) {
+  transition-duration: @duration;
+  transition-delay: @delay;
+  transition-timing-function: ease-out;
+}
+
+
+//Лого, контакты и т д
+.top-nav {
+  &.an {
+    transform: scale(2) translateY(-100%);
+    opacity: 0;
+  }
+  &.ani {
+    opacity: 1;
+    .flyhere(0.8s,0.6s);
+  }
+}
+//Главное меню
+.mmenu {
+  &.an {
+    transform: scale(1.5) translateY(-100%);
+    opacity: 0;
+  }
+  &.ani {
+    opacity: 1;
+    .flyhere(0.6s,0.5s);
+  }
+}
+
+.flywrap {
+  &.an > section > * {
+    opacity: 0;
+    transform: scale(0.8) translateY(-100px);
+  }
+  &.ani  > section > * {
+      opacity: 1;
+      .flyhere(1.5s,0.5s);
+  }
+}

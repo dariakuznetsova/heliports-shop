@@ -1,0 +1,67 @@
+extends layout
+
+block content
+    h1 Guideline
+    h3 Список страниц и примеры верстки элементов.
+
+    hr
+
+    ul.menu
+        li home.html - главная
+        li catalog.html - каталог
+        li
+
+    h3 Примеры для jade
+    //Эти коменты перейдут в html, в них стоит писать только указание
+    //закрытия тэгов например
+
+    //Jade чувствителен к отступам, цикл должен быть внутри ul,
+    //   а li внутри цикла
+
+    ul.for-loop-example
+        -for (var x = 0; x < 3; x++)
+            li='item ' + x
+    //Неправильные примеры:
+    ul.for-loop-wrong-example
+    -for (var x = 0; x < 3; x++)
+        li='item ' + x
+    ul.for-loop-wrong-example
+        -for (var x = 0; x < 3; x++)
+        li='item ' + x
+
+    //Обрати внимание на написание тэгов с "="
+    //переменная в этом месте x = 3
+    p item x
+    // = обязательно без пробела
+    p = 'item'+x
+    p= 'item x'
+    p= 'item' + x
+
+    //еще один удобный для вывода данных способ
+    ul.list-example
+        //объявление переменной может быть и на одном уровне с последующим each
+        -list = ["Uno", "Dos", "Tres", "Cuatro", "Cinco", "Seis"]
+        each item in list
+          li= item
+
+    ul
+        each val in [1, 2, 3, 4, 5]
+            li= val
+
+    ul
+        each val, index in {1:'one',2:'two',3:'three'}
+            li= index + ': ' + val
+
+    - var values = [];
+    ul
+        each val in values.length ? values : ['There are no values']
+            li= val
+
+    //Работаем с меню так:
+        сам файл меняем в /tmpdata/default.json
+
+        //вызываем функцию menu из includes/mixins
+        //и передаем ей объект menu из default.json
+        //Дополнительно передаем класс
+    nav
+        +menu(menu)(class="main-menu")

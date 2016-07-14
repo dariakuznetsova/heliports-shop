@@ -1,0 +1,91 @@
+extends layout_promo
+
+block content
+    svg.svg-filter
+        defs
+            filter#filter-hover
+                feColorMatrix(type="matrix" values="1 1 1 1 0 0.5 0.5 0.5 0.5 0 0 0 0 0 0 0 0 0 1 0 ")
+            filter#filter-click
+                feColorMatrix(type="matrix" values="0.4 0.4 0.4 0.4 0 0.4 0.4 0.4 0.4 0 0.4 0.4 0.4 0.4 0 0 0 0 1 0 ")
+    video.bg-video(autoplay poster="img/design/sky.jpg")
+        source(src="video/sky.webm" type="video/webm")
+        source(src="video/sky.mp4" type="video/mp4")
+        source(src="video/sky.ogv" type="video/ogg")
+    .home-container
+
+    .container
+        .main-content
+            h1.animate-scale Robinson R44 Raven I
+                span.cost от 616 000 $
+            .row.filter-line
+                a Экстерьер
+                a.active Интерьер
+            .row.animate-fadeIn
+                .col-xs-8.photo-block-big
+                    img(src="img/heli.png")
+                .col-xs-4.photo-nav
+                    .row
+                        -for(var x = 0; x < 5; x++)
+                            svg.col-xs-6.photo-nav-item
+                                image(xlink:href="/html/img/heli_mini.png" width="100%" height="100%" data-class-active="")
+                        .col-xs-6.photo-nav-item.active
+                .col-xs-12
+                    .col-xs-9.description
+                        .row.dinamyc-info
+                            .col-xs-4
+                                h2 Личные данные
+                                ul
+                                    li  Максимальная скорость: 240км/ч
+                                    li  Крейсерская скорость: 210км/ч
+                                    li  Скороподъемность: 5м/с
+                                    li  Дальность полета: 619 км
+                                    li  Длительность полета: 3.50 ч
+                                    li  Максимальная высота: 4250 м
+                                    li  Экипаж: 1+3
+                            .col-xs-4
+                                h2 Габариты
+                                ul
+                                    li  Длина фюзеляжа: 9.07 м
+                                    li  Длина с винтом: 11.76м
+                                    li  Диаметр несущего винта: 10.06 м
+                                    li  Высота: 3.28 м
+                                    li  Колея шасси: 2.16
+                                    li  Максимальная высота: 4250 м
+                                    li  Экипаж: 1+3
+                            .col-xs-4
+                                h2 Силовая установка
+                                ul
+                                    li  Количество двигателей: 1
+                                    li  Тип двигателя: V6, поршневой, оппозитный
+                                    li  Модель двигателя: Lycoming O-540
+                                    li  Топливо: 100 LL
+                                    li  Крейсерская мощность: 195
+                                    li  Взлетная мощность: 210 л/с
+                                    li  Экипаж: 1+3
+                            .col-xs-12.icon-line
+                                .icon-block
+                                    img(src="img/design/iMan.png")
+                                    p 1+3
+                                .icon-block
+                                    img(src="img/design/iSpeed.png")
+                                    p 240 км/ч
+                                .icon-block
+                                    img(src="img/design/iWheel.png")
+                                    p 619 км
+                            .col-xs-12.text-block
+                                p Легкий многоцелевой вертолет Robinson R44 Raven I рассчитан на четырех человек - трех пассажиров и одного пилота. Это простое в эксплуатации транспортное средство надежно, что подтверждает мировая статистика. В серийном выпуске вертолет уже более 17-ти лет, за это время работа его систем многократно оптимизировалась, с целью сделать полеты эффективными, при низких операционных затратах. Стоит отметить, что Robinson R44 Raven I оснащен поршневым карбюраторным двигателем. Но летные характеристики этого воздушного судна (в частности, аэродинамика и скорость) таковы, что в эксплуатации он не уступает моделям с газотурбинными двигателями.
+                                p Сиденья в салоне установлены по схеме “два плюс два”; у владельцев есть возможность использовать съемные дублирующие элементы управления. Перегородка между первой и второй парой кресел отсутствует, и это обеспечивает отличный обзор для всех сидящих в салоне. Крейсерская скорость машины – 210 километров в час, средний расход топлива – от 45 до 50 литров в час. Вертолет имеет минимальное число отказов по техническим причинам и летных происшествий, в сравнении с другими легкими вертолетами. Это, в сочетании с относительно доступной ценой, сделало Robinson R44 Raven I одним из самых продаваемых в мире.
+                        .row
+                            .col-xs-12
+                                a.btn.yellow.small Заказать
+                                a.btn.white В наличии
+                                a.btn.white Похожие модели
+                    .col-xs-2.consulting
+                        .block
+                            img(src="img/people.png")
+                            h2  Грановская Екатерина
+                            h3  руководитель отдела продаж
+                            a(href="tel:+7903722-66-11")    +7 (903) 722-66-11
+
+
+

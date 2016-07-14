@@ -1,0 +1,130 @@
+include ../includes/mixins
+doctype html
+
+html
+    head
+        meta(charset='utf-8')
+        meta(name="viewport",content="width=1230")
+        link(href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css')
+        include ../includes/styles
+        script(src='//api-maps.yandex.ru/2.1/?lang=ru_RU' type="text/javascript")
+    body
+        header.container
+            .row.heli-russia
+                nav.top-nav
+                    .col.logo-russia
+                        a(href="main-russia.html")
+                    //.col.basket.wi-fi
+                    //    a.order(href="#") 126.7
+                    //        br
+                    //        | AIP для пилотов
+                    .col.otryad
+                        a.order(href="#") Добровольный
+                            br
+                            | спасательный
+                            br
+                            | отряд «Ангел»
+                    .col.club
+                        a.order(href="#") Присоединиться
+                            br
+                            | к Хелипортам России
+                    .col.phone
+                            b 8 800 707-44-77 <br>
+                            a.yellow.no-link Заказать звонок
+                    .col.langs
+                        .rus.langs-active
+                            a(href='#') Rus
+                        .eng
+                            a(href='#') Eng
+                nav.shop-menu.an
+                    ul
+                        li
+                            a(href="#").after-elem.shop-menu__inner-link.inner-link-first О нас
+                            ul.inner-list
+                                li
+                                    a(href='heliports-of-russia.html') Сеть Хелипортов России
+                                li
+                                    a(href='business.html') Бизнес
+                                li
+                                    a(href='social_responsibility.html') Социальная ответственность
+                                li
+                                    a(href='infra_development.html') Инфраструктурный девелопмент
+                                li
+                                    a(href='management-russia.html') Руководство
+                        li
+                            a(href="partnership.html") Партнерство
+                            //ul.inner-list
+                            //    li
+                            //        a(href='#') Пункт
+                            //    li
+                            //        a(href='#') Пункт
+                            //    li
+                            //        a(href='#') Пункт
+                            //    li
+                            //        a(href='#') Пункт
+                        li
+                            a(href="#").after-elem.shop-menu__inner-link Бренды
+                            ul.inner-list
+                                li
+                                    a(href='kartochka_heli.html') Robinson
+                                li
+                                    a(href='#') Airbus Helicopters
+                                li
+                                    a(href='#') Bell Helicopter
+                                li
+                                    a(href='#') Agusta Westland
+                        li
+                            a(href="our_services.html") Услуги
+                            //ul.inner-list
+                            //    li
+                            //        a(href='#') Аренда
+                            //    li
+                            //        a(href='#') ТО и сервис
+                            //    li
+                            //        a(href='#') Заправка
+                            //    li
+                            //        a(href='#') Страхование
+                            //    li
+                            //        a(href='#') Лизинг
+                            //    li
+                            //        a(href='#') Обучение
+                            //    li
+                            //        a(href='#') Продажа вертолетов
+                        li
+                            a(href="#").after-elem.shop-menu__inner-link Пресс-центр
+                            ul.inner-list
+                                li
+                                    a(href='news-russia.html') Новости
+                                li
+                                    a(href='video-russia.html') Видео
+                                li
+                                    a(href='photo-russia.html') Фото
+                                li
+                                    a(href='about_us-russia.html') СМИ о нас
+                        li: a(href="career-russia.html") Карьера
+                        li: a(href="contacts-russia.html") Контакты
+
+        .bg-color
+        block content
+            | No content defined
+
+        footer.container.an.footer-heli-russia
+            hr
+            .foot
+                .col
+                    p 8 (800) 707-44-77 (круглосуточно)
+                    p info@heliport-russia.ru
+                    p © 2016 Heliport Moscow
+
+                .col.social
+                    a.icon-vkontakte
+                    a.icon-facebook
+                    a.icon-twitter
+                    a.icon-instagram
+                    a.icon-gplus
+                .col.search
+                    form
+                        input(name="q", type="text", placeholder="Поиск по сайту")
+                        input(type="submit")
+
+        include ../includes/scripts

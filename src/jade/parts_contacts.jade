@@ -1,0 +1,60 @@
+extends layouts/layout_parts
+
+block content
+    .contacts
+        h1 Контакты
+        .left-block
+            .map
+                #map_parts
+            script.
+                ymaps.ready(function () {
+                    init_contacts(55.88205076829782,36.82611149999993);
+                });
+                function init_contacts(c, d) {
+                    var myMap2 = new ymaps.Map("map_parts", {
+                                center: [55.88205076829782,36.82611149999993],
+                                zoom: 15
+                            }, {
+                                searchControlProvider: 'yandex#search'
+                            }),
+
+                            myGeoObject2 = new ymaps.GeoObject({
+                                draggable: true
+                            });
+
+                    myMap2.geoObjects
+                            .add(myGeoObject2)
+                            .add(new ymaps.Placemark([c, d], {}, {
+                                iconLayout: 'default#image',
+                                iconImageSize: [29, 52],
+                                iconImageHref: 'img/heli-parts/heli-parts-icon.png'
+                            }))
+                }
+            .print_button
+                a(href='javascript:window.print()').print__link Распечатать
+
+        .right-block
+            h2 Центральный склад Хелипорт Партс
+
+            p.address 143521, Московская область, Истринский район, Буньково, с/пос. Лучинское дер. Крючково, ул. Вишнёвая, стр.1
+                img(src='img/heli-parts/location.png')
+            p.tel +7 903 744-27-70
+                img(src='img/heli-parts/phone-call.png')
+            p.email parts@vertolet.ru
+                img(src='img/heli-parts/letter.png')
+            p.office_hours с 9:00 до 21:00
+                img(src='img/heli-parts/circle.png')
+            p Доставка заказов осуществляется по всей территории России и СНГ любым типом транспорта. Товар может быть отправлен Вам с помощью курьерских:
+            ul
+                li
+                    img(src='./img/pony.png')
+                li
+                    img(src='./img/ems.png')
+                li
+                    img(src='./img/delovye_linii.png')
+                li
+                    img(src='./img/pochta.png')
+            p Курьерская доставка по Москве зависит от веса и габаритов Вашего заказа:
+            p Доставка курьером по Москве осуществляется в день заказа или на следующий день для габаритных заказов размером:
+            p.blue не более 30x30x30 см. и весом не более 10 кг.
+            p Заказы, превышающие указанные транспортные характеристики, доставляются по отдельному согласованию с клиентом.

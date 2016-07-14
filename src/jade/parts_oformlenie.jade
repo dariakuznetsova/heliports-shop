@@ -1,0 +1,148 @@
+extends layouts/layout_parts
+
+block content
+    .lk.oformlenie_zakaza.oformlenie_parts.table_modify1
+        h1 Оформление заказа
+        ul.menu-list
+            li
+                a(href='#') Корзина
+            li
+                a(href='#') Учетная запись
+            li
+                a(href='#') Wishlist
+            li
+                a(href='#') Заказы
+            li
+                a(href='#') Выход
+        form
+            .h2 Основная информация
+            .left-block.main-info
+                fieldset
+                    label.star
+                        span E-mail:
+                    input(type='text')
+                fieldset
+                    label.star
+                        span Имя:
+                    input(type='text')
+                fieldset
+                    label Фамилия:
+                    input(type='text')
+                fieldset
+                    label.star
+                        span Телефон:
+                    input(type='text')
+
+            .right-block.main-info
+                fieldset
+                    label Улица, дом:
+                    input(type='text')
+                fieldset
+                    label.star
+                        span Индекс:
+                    input(type='text').select_input
+                    select.select_input.country_select
+                        option Россия
+                        option Украина
+                        option Испания
+                        option Италия
+                        option Финляндия
+                        option ЮАР
+                    select.select_input.city_select
+                        option Москва
+                        option Санкт-Петербург
+                        option Рязань
+                        option Нижний Новогород
+                        option Владивосток
+                        option Магадан
+                    //input(type='text').select_input.country_select
+                    //input(type='text').select_input.city_select
+                fieldset
+                    label Местоположение:
+                    select.select_input.city_select
+                        option Москва
+                            option Санкт-Петербург
+                            option Рязань
+                            option Нижний Новогород
+                            option Владивосток
+                            option Магадан
+                    //input(type='text').city_select
+                fieldset
+                    label Дата доставки:
+                    input(type='text')
+                fieldset
+                    label Время доставки:
+                    input(type='text')
+            .left-block.dostavka
+                .h2 Способы доставки
+                table
+                    tr
+                        td
+                            label
+                                input(type="radio" name='dostavka').checked_elem
+                                .checkbox-fake
+                                | Самовывоз
+                        td
+                            span 0 ₽
+                    tr
+                        td
+                            label
+                                input(type="radio" name='dostavka').checked_elem
+                                .checkbox-fake
+                                | Курьер (Москва)
+                        td
+                            span 500 ₽
+                    tr
+                        td(colspan='2') Для формирования стоимости автоматизированной доставки заполните местоположение и индекс
+            .left-block.oplata
+                .h2 Способы оплаты
+                label
+                    input(type="radio" name='oplata').checked_elem
+                    .checkbox-fake
+                    | Наличными при получении
+                label
+                    input(type="radio" name='oplata').checked_elem
+                    .checkbox-fake
+                    | Банковской картой
+            .right-block
+                .h2 Комментарии к заказу
+                textarea
+            .left-block.tovary.wishlist
+                .h2 Товары в заказе
+                table
+                    tr
+                        th Артикул
+                        th Название
+                    tr.tovary-line-tr
+                        td.art
+                            a(href='#') RAM-B-166-AP14U
+                        td.name
+                            a(href='#') Редукторное масло SWEPCO 201 (1 Галлон)
+                        td.quantity
+                            a(href='#') —
+                            input(type='text' value='12')
+                            a(href='#') +
+                        td.price 8 500 ₽
+                        td.close
+                            a(href='#').close-icon
+                    tr.tovary-line-tr
+                        td.art
+                            a(href='#') RAM-B-166-AP14U
+                        td.name
+                            a(href='#') Редукторное масло SWEPCO 201 (1 Галлон)
+                        td.quantity
+                            a(href='#') —
+                            input(type='text' value='12')
+                            a(href='#') +
+                        td.price 8 500 ₽
+                        td.close
+                            a(href='#').close-icon
+
+
+                .total-sum
+                    p Итого:
+                        span 36 000 ₽
+                .make_order
+                    .back_link
+                        a(href='#') — Вернуться в каталог
+                    button(type='submit') Оформить заказ

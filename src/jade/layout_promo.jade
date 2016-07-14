@@ -1,0 +1,135 @@
+include includes/mixins
+doctype html
+
+html
+    head
+        meta(charset='utf-8')
+        meta(name="viewport",content="width=device-width, initial-scale=1.0")
+        link(href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css')
+        include includes/styles
+    body
+        header
+            .container
+                nav.top-nav
+                    .row
+                        .col-xs-2
+                            a(href="/").logo
+                        .col-xs-2.nav-item
+                            .row
+                                .col-xs-4.icon
+                                    img(src="img/design/wifi.png")
+                                .col-xs-8
+                                    a.link 126.7<br>AIP для пилотов
+                        .col-xs-2.nav-item
+                            .row
+                                .col-xs-4.icon
+                                    img(src="img/design/present.png")
+                                .col-xs-8
+                                    a.link Подарок при вступлении в клуб
+                        .col-xs-2.nav-item
+                            .row
+                                .col-xs-4.icon
+                                    img(src="img/design/angel10.png")
+                                .col-xs-8
+                                    a.link Добровольный спасательный отряд &laquo;Ангел&raquo;
+                        .col-xs-2.nav-item.phone
+                            .row
+                                .col-xs-4.icon
+                                    img(src="img/design/phonecall.png")
+                                .col-xs-8
+                                    p +7 (495) 77-000-77 <br> 8 (800) 707-44-77 <br>
+                                    a.yellow.bold.no-link Заказать звонок
+                        .col-xs-2.nav-item
+                            a(href="/").logo-shop
+                nav
+                    ul.main-menu.promo
+                        li
+                            a(href="/html/learning.html").bold.link.border Обучение<br> пилотированию
+                        li
+                            a(href="/html/rent.html").bold.link.border Аренда<br> вертолетов
+                        li
+                            a(href="/html/tourism.html").bold.link.border Аэротуризм
+                        li
+                            a(href="/html/gifts.html").bold.link.border Подарочные<br> сертификаты
+                        li
+                            a(href="/html/shop.html").bold.link.border Продажа<br> вертолетов
+                        li
+                            a(href="/html/services.html").bold.link.border Услуги<br> комплекса
+                            ul.hide-nav
+                                li
+                                    a(href="/html/services.html").link ПО и сервис
+                                li
+                                    a(href="/html/services.html").link Заправка
+                                li
+                                    a(href="/html/services.html").link Страхование
+                                li
+                                    a(href="/html/services.html").link Лизинг
+                                li
+                                    a(href="/html/services.html").link Регистрация и сертификация
+                                li
+                                    a(href="/html/services.html").link Тюнинг
+                                li
+                                    a(href="/html/services.html").link Базирование
+                                li
+                                    a(href="/html/home.html").link Запчасти
+                        li
+                            a(href="/html/topilots.html").bold.link.border Пилотам
+                        li
+                            a(href="/html/about.html").bold.link.border О проекте
+                            ul.hide-nav
+                                li
+                                    a(href="/html/about.html").link О нас
+                                li
+                                    a(href="/html/home.html").link Бутик
+                                li
+                                    a(href="/html/pilots.html").link Наши пилоты
+                                li
+                                    a(href="/html/routes.html").link Маршруты
+                                li
+                                    a(href="/html/home.html").link Автодромы
+                                li
+                                    a(href="/html/video.html").link Видео
+                                li
+                                    a(href="/html/home.html").link Фотогалерея
+                                li
+                                    a(href="/html/press.html").link Пресса
+                                li
+                                    a(href="/html/articles.html").link Статьи
+                                li
+                                    a(href="/html/airclub.html").link Аэроклуб
+                                li
+                                    a(href="/html/vacancies.html").link Вакансии
+                                li
+                                    a(href="/html/faqs.html").link FAQ
+                        li
+                            a(href="#").bold.link.border Контакты
+                        li
+                            a(href="/html/hews.html").bold.link.border Новости
+
+        block content
+            | No content defined
+        .container
+            footer
+                .row
+                    .col-xs-12.services
+                        .row
+                            .col-xs-4
+                                a.link   Маршруты
+                            .col-xs-4
+                                a.link   Запчасти
+                            .col-xs-4
+                                a.link   Сервисный центр
+                    .col-xs-6
+                        .col-left
+                            .social
+                                a.icon-vkontakte
+                                a.icon-facebook
+                                a.icon-twitter
+                                a.icon-instagram
+                                a.icon-gplus
+                            p 500 метров от МКАД по Новорижскому шоссе<br>+7 (495) 77-000-77, 8 (800) 707-44-77 (круглосуточно)
+                            a Схема проезда
+                    .col-xs-6
+                        .col-right
+                            img(src="img/design/logorussia.png")
+        include includes/scripts

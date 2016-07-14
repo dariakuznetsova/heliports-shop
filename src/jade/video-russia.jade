@@ -1,0 +1,37 @@
+extends layouts/layout_russia
+
+block content
+    .container
+        .news-russia.video-russia
+            .col-xs-12.title
+                .col.col-xs-6
+                    h1 Видео
+            .col-xs-12.video
+                -for(var x = 0; x < 9; x++)
+                    .col-xs-4.news-item
+                        .img.video_link
+                            img(src='img/video2.png' alt='Видео')
+                            img(src='img/video-icon.png' alt='Иконка видео')
+                        .link.bold Заседание комиссии при Президенте
+                        p 21.06.2015
+                        p.small-text Самый крупный инвестор Реутова – компания «Хелипорты России» принесла в городской бюджет в 2015 году 60 миллионов рублей, сообщил глава Реутова Сергей Юров.
+            .col-xs-12.subs
+                .subscribe-link
+                    a(href='#') Получать новые видео Хелипортов
+            .pagination
+                .wrap
+                    a(href='#').prev —предыдущая
+                    .pages
+                        span Страница
+                        input(type='text' value='1')
+                        span из
+                        span 165
+                    a(href='#').next следующая—
+
+
+            .video-modal
+                video(poster="img/design/sky.jpg", controls)
+                    source(src="video/sky.webm", type="video/webm")
+                    source(src="video/sky.mp4", type="video/mp4")
+                    source(src="video/sky.ogv", type="video/ogg")
+

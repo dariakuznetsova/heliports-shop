@@ -1,0 +1,240 @@
+extends layouts/layout_parts
+
+block content
+    .with_aside.radio
+        h1 Радиооборудование
+
+        .wrap_for_aside
+            aside
+                form
+                    .aside-block
+                        ul.producers_list
+                            .title Производитель
+                            - var producers = ['Airbus Helicopters', 'TM', 'Turbomeca']
+                            each item in producers
+                                li
+                                    label
+                                        p= item
+                                        input(type="checkbox").checked_elem
+                                        .checkbox-fake
+                        ul.helicopters_list
+                            .title Вертолет
+                            - var producers = ['Вертолет1', 'Вертолет2', 'Вертолет3']
+                            each item in producers
+                                li
+                                    label
+                                        p= item
+                                        input(type="checkbox").checked_elem
+                                        .checkbox-fake
+                    .clean_all_filters
+                        a(href='#') Очистить фильтр
+
+            .main-block
+                .what_else_to_buy
+                    .left-block.tovary.zakazy
+                        .sort_by
+                            p Сортировать по:
+                            ul
+                                li
+                                    a(href='#') цене
+                                li
+                                    a(href='#') скидке
+                                li
+                                    select(data-placeholder="названию").select_input.city_select
+                                        option Airbus
+                                        option Robinson
+                                        option Airbus
+                                        option Robinson
+                                        option Airbus
+                                li
+                                    select(data-placeholder="популярности").select_input.city_select
+                                        option самые популярные
+                                        option наименее популярные
+                        .table_wrap
+                            table
+                                tr
+                                    th Артикул
+                                    th Название
+                                    th Кол-во
+                                    th Цена
+                                tr.tovary-line-tr
+                                    td.art
+                                        a(href='#') RAM-B-166-AP14U
+                                    td.name
+                                        a(href='#') Редукторное масло SWEPCO 201 (1 Галлон)
+                                    td.quantity
+                                        input(type='text' value='1')
+                                        .more_less
+                                            a(href='#') <
+                                            a(href='#') >
+                                    td.price Под заказ
+                                    td.add
+                                        .delete
+                                            a(href='#').plus +
+                                            .wrap.show-hide
+                                                img(src='img/heli-parts/basket.png' alt='товар в корзине')
+                                                a(href='#').delete_from_basket Удалить
+                                tr.tovary-line-tr
+                                    td.art
+                                        a(href='#') RAM-B-166-AP14U
+                                    td.name
+                                        a(href='#') Редукторное масло SWEPCO 201 (1 Галлон)
+                                    td.quantity
+                                        input(type='text' value='1')
+                                        .more_less
+                                            a(href='#') <
+                                            a(href='#') >
+                                    td.price 45 000 ₽
+                                    td.add
+                                        .delete
+                                            a(href='#').plus +
+                                            .wrap.show-hide
+                                                img(src='img/heli-parts/basket.png' alt='товар в корзине')
+                                                a(href='#').delete_from_basket Удалить
+                                tr.tovary-line-tr
+                                    td.art
+                                        a(href='#') RAM-B-166-AP14U
+                                        span.discount -30%
+                                    td.name
+                                        a(href='#') Редукторное масло SWEPCO 201 (1 Галлон)
+                                    td.quantity
+                                        input(type='text' value='1')
+                                        .more_less
+                                            a(href='#') <
+                                            a(href='#') >
+                                    td.price 126 000 ₽
+                                    td.add
+                                        .delete
+                                            a(href='#').plus +
+                                            .wrap.show-hide
+                                                img(src='img/heli-parts/basket.png' alt='товар в корзине')
+                                                a(href='#').delete_from_basket Удалить
+                                tr.tovary-line-tr
+                                    td.art
+                                        a(href='#') RAM-B-166-AP14U
+                                    td.name
+                                        a(href='#') Редукторное масло SWEPCO 201 (1 Галлон)
+                                    td.quantity
+                                        input(type='text' value='1')
+                                        .more_less
+                                            a(href='#') <
+                                            a(href='#') >
+                                    td.price 126 000 ₽
+                                    td.add
+                                        .delete
+                                            a(href='#').plus +
+                                            .wrap.show-hide
+                                                img(src='img/heli-parts/basket.png' alt='товар в корзине')
+                                                a(href='#').delete_from_basket Удалить
+                                tr.tovary-line-tr
+                                    td.art
+                                        a(href='#') RAM-B-166-AP14U
+                                    td.name
+                                        a(href='#') Редукторное масло SWEPCO 201 (1 Галлон)
+                                    td.quantity
+                                        input(type='text' value='1')
+                                        .more_less
+                                            a(href='#') <
+                                            a(href='#') >
+                                    td.price 45 000 ₽
+                                    td.add
+                                        .delete
+                                            a(href='#').plus +
+                                            .wrap.show-hide
+                                                img(src='img/heli-parts/basket.png' alt='товар в корзине')
+                                                a(href='#').delete_from_basket Удалить
+                                tr.tovary-line-tr
+                                    td.art
+                                        a(href='#') RAM-B-166-AP14U
+                                    td.name
+                                        a(href='#') Редукторное масло SWEPCO 201 (1 Галлон)
+                                    td.quantity
+                                        input(type='text' value='1')
+                                        .more_less
+                                            a(href='#') <
+                                            a(href='#') >
+                                    td.price 45 000 ₽
+                                    td.add
+                                        .delete
+                                            a(href='#').plus +
+                                            .wrap.show-hide
+                                                img(src='img/heli-parts/basket.png' alt='товар в корзине')
+                                                a(href='#').delete_from_basket Удалить
+                                tr.tovary-line-tr
+                                    td.art
+                                        a(href='#') RAM-B-166-AP14U
+                                    td.name
+                                        a(href='#') Редукторное масло SWEPCO 201 (1 Галлон)
+                                    td.quantity
+                                        input(type='text' value='1')
+                                        .more_less
+                                            a(href='#') <
+                                            a(href='#') >
+                                    td.price 45 000 ₽
+                                    td.add
+                                        .delete
+                                            a(href='#').plus +
+                                            .wrap.show-hide
+                                                img(src='img/heli-parts/basket.png' alt='товар в корзине')
+                                                a(href='#').delete_from_basket Удалить
+                                tr.tovary-line-tr
+                                    td.art
+                                        a(href='#') RAM-B-166-AP14U
+                                    td.name
+                                        a(href='#') Редукторное масло SWEPCO 201 (1 Галлон)
+                                    td.quantity
+                                        input(type='text' value='1')
+                                        .more_less
+                                            a(href='#') <
+                                            a(href='#') >
+                                    td.price 45 000 ₽
+                                    td.add
+                                        .delete
+                                            a(href='#').plus +
+                                            .wrap.show-hide
+                                                img(src='img/heli-parts/basket.png' alt='товар в корзине')
+                                                a(href='#').delete_from_basket Удалить
+                                tr.tovary-line-tr
+                                    td.art
+                                        a(href='#') RAM-B-166-AP14U
+                                    td.name
+                                        a(href='#') Редукторное масло SWEPCO 201 (1 Галлон)
+                                    td.quantity
+                                        input(type='text' value='1')
+                                        .more_less
+                                            a(href='#') <
+                                            a(href='#') >
+                                    td.price 45 000 ₽
+                                    td.add
+                                        .delete
+                                            a(href='#').plus +
+                                            .wrap.show-hide
+                                                img(src='img/heli-parts/basket.png' alt='товар в корзине')
+                                                a(href='#').delete_from_basket Удалить
+                                tr.tovary-line-tr
+                                    td.art
+                                        a(href='#') RAM-B-166-AP14U
+                                    td.name
+                                        a(href='#') Редукторное масло SWEPCO 201 (1 Галлон)
+                                    td.quantity
+                                        input(type='text' value='1')
+                                        .more_less
+                                            a(href='#') <
+                                            a(href='#') >
+                                    td.price 45 000 ₽
+                                    td.add
+                                        .delete
+                                            a(href='#').plus +
+                                            .wrap.show-hide
+                                                img(src='img/heli-parts/basket.png' alt='товар в корзине')
+                                                a(href='#').delete_from_basket Удалить
+
+            .pagination
+                .wrap
+                    a(href='#').prev предыдущая
+                    .pages
+                        span Страница
+                        input(type='text' value='1')
+                        span из
+                        span 165
+                    a(href='#').next следующая

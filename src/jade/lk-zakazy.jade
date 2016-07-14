@@ -1,0 +1,68 @@
+extends layouts/layout_shop
+
+block content
+    .container
+        .lk.zakazy
+            h1 Личный кабинет
+            ul.menu-list
+                li
+                    a(href='basket.html') Корзина
+                li
+                    a(href='lk.html') Учетная запись
+                li
+                    a(href='wishlist.html') Wishlist
+                li.active-item
+                    a(href='lk-zakazy.html') Заказы
+                li
+                    a(href='#') Выход
+            ul.all_orders
+                li
+                    a(href='#') Все заказы
+                li
+                    a(href='#') История
+            .order_status
+                p Заказ&#160;
+                    span №34
+                    | от&#160;
+                    span 21.02.2016
+                p Статус:&#160;&#160;
+                    span Принят 21.02.2016
+            .tovary
+                    table
+                        tr
+                            td.img
+                                img(src='./img/shop-cat-4.png')
+                            td.name
+                                p Кеды Satorisan
+                                p арт: Pilot Vintage brown
+                            td.size XXL
+                            td.quantity
+                                span 12
+                                | &#160;шт x&#160;
+                                span 8 500 ₽
+                            td.total-sum Итого:
+                                    span 36 000 ₽
+                            td.to_basket
+                                a(href='#') В корзину
+
+                    table
+                        tr
+                            td Выбранный способ оплаты:
+                            td Наличными при получении
+                        tr
+                            td Оплачен:
+                            td Нет
+                        tr
+                            td Адрес доставки:
+                            td 142190
+
+
+
+
+
+            //    p 500 метров от МКАД по Новорижскому шоссе
+            //    p.last 8 (800) 707-44-77 (круглосуточно)
+            //    a(href='#') Схема проезда
+
+
+

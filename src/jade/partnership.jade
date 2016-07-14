@@ -1,0 +1,118 @@
+extends layouts/layout_russia
+
+block content
+    .container
+        .partnership
+            .col-xs-12.title
+                .col.col-xs-9
+                    h1 Партнерство
+                    p «Хелипорты России» приглашают к сотрудничеству организации и частных лиц, заинтересованных в развитии региональных программ, построения эффективного бизнеса и создания транспортной сети нового поколения.
+                    p Наше партнерство основано на взаимовыгодном сотрудничестве, сходстве миссий, целей и ценностей, что обеспечивает максимальный эффект работы каждого регионального центра. Мы стремимся к увеличению ценности нашего сотрудничества, постоянно открывая новые возможности и совместно работая над созданием прочных взаимовыгодных отношений.
+                    .download
+                        a(href='#') Скачать презентацию
+            .heliports-of-russia.main-page
+                    .col-xs-12.main-video
+                        .img
+                            img(src='img/main-helicopter.png' alt='вертолет')
+                            img.video_link-main(src='img/main-video.png' alt='видео')
+                        .be_a_partner
+                            a(href='#') Стать партнером
+                    .col-xs-12.otryad_A
+                        p Реализация проекта по созданию многофункциональных вертолётных комплексов «Хелипорты России» осуществляется при активном содействии государственных структур и профильных учреждений.
+                        .img.first-img
+                            img(src='img/russoa-logo2.png' alt='отряд Ангел')
+                        .img.second-img
+                            img(src='img/russia_logo.png' alt='отряд Ангел')
+                    .col-xs-12.map
+                        h2 Уже в
+                            span 9
+                            | городах
+                        img(src='img/map.png')
+                        .cities
+                            .city-block
+                                p.city Москва
+                            .city-block
+                                p.city Истра
+                            .city-block
+                                p.city Реутов
+                            .city-block
+                                p.city Ульяновск
+                            .city-block
+                                p.city Калуга
+                            .city-block
+                                p.city Краснодар
+                            .city-block
+                                p.city Новосибирск
+                            .city-block
+                                p.city Брянск
+                            .city-block
+                                p.city Тюмень
+                            .city-block
+                                p.city Самара
+
+                        .col-xs-12.cities-list
+                            ul
+                                li.switch_city.cities-list-active
+                                    span Москва
+                                li.switch_city
+                                    span Истра
+                                li.switch_city
+                                    span Реутов
+                                li.switch_city
+                                    span Ульяновск
+                                li.switch_city
+                                    span Калуга
+                                li.switch_city
+                                    span Краснодар
+                                li.switch_city
+                                    span Новосибирск
+                                li.switch_city
+                                    span Брянск
+                                li.switch_city
+                                    span Тюмень
+                                li.switch_city
+                                    span Самара
+
+                    ul.col-xs-12.city-info-block
+                            li.col-xs-12
+                                .col-xs-12.address
+                                    .col.col-xs-6
+                                        img(src='img/heli-moscow-big.png' alt='лого')
+                                    .col.col-xs-6.search
+                                        a(href='http://www.heliport-moscow.ru/' target='_blank') www.heliport-moscow.ru
+                                        p
+                                            | +7(495) 77-000-77 | 8(800) 707-44-77
+                                            br
+                                            span Схема проезда
+                                            br
+                                            | Частота 126.7, позывной "Рублево"
+
+                                .col-xs-12.video-block
+                                    .col.col-xs-6
+                                        .info-block.info1
+                                            p.
+                                                Это флагманский центр проекта «Хелипорты России» по созданию крупнейшего в Европе вертолётного мультифункционального комплекса, рассчитанного на базирование более 200 единиц авиационной техники.
+                                            p.
+                                                «Хелипорт Москва» был открыт в конце 2013 года. Всего за год компания смогла добиться впечатляющих результатов, совершив более 5000 вылетов по разным направлениям и приняв участие в нескольких грандиозных вертолётных экспедициях. На данный момент комплекс существует в light-версии и является полноценным вертолётным центром, осуществляющим широкий спектр услуг в сфере малой гражданской авиации, начиная от аэротакси, продажи и аренды авиатехники, заканчивая квалифицированным обслуживанием и обучением пилотов-любителей.
+                                            p.
+                                                «Хелипорт Москва» обладает крупнейшим собственным вертолётным парком, в составе которого только новые модели вертолёты ведущих мировых производителей: Bell, AirbusHelicopters, Robinson, AgustaWestland. На территории комплекса есть авиационная техническая база, собственный склад запчастей и отапливаемые ангары с возможностью всесезонного хранения техники. Компания предлагает услуги по покупке и аренде вертолётов, а также эксклюзивные условия кредитования, лизинга и страхования.
+                                    .col.video.col-xs-6
+                                        a(href='#').video_link
+                                            img(src='img/helicopter.png')
+                                            img.icon(src='img/video-icon.png')
+
+
+                .video-modal
+                    video(poster="img/design/sky.jpg", controls)
+                        source(src="video/sky.webm", type="video/webm")
+                        source(src="video/sky.mp4", type="video/mp4")
+                        source(src="video/sky.ogv", type="video/ogg")
+                .video-modal-main
+                    video(poster="img/design/sky.jpg", controls)
+                        source(src="video/sky.webm", type="video/webm")
+                        source(src="video/sky.mp4", type="video/mp4")
+                        source(src="video/sky.ogv", type="video/ogg")
+
+
+
+

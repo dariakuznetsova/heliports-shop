@@ -1,0 +1,53 @@
+extends layout
+
+block content
+    .bg-color
+    .container
+        .main-content
+            h1 О проекте
+            .row
+                .col-xs-2
+                    ul.side-bar
+                        li
+                            a(href="/html/about.html").link.bold.current О нас
+                        li
+                            a(href="/html/about.html").link.bold Бутик
+                        li
+                            a(href="/html/pilots.html").link.bold Наши пилоты
+                        li
+                            a(href="/html/routes.html").link.bold Маршруты
+                        li
+                            a(href="/html/video.html").link.bold Видео
+                        li
+                            a(href="/html/about.html").link.bold Фотогалерея
+                        li
+                            a(href="/html/press.html").link.bold Пресса
+                        li
+                            a(href="/html/articles.html").link.bold Статьи
+                        li
+                            a(href="/html/airclub.html").link.bold Аэроклуб
+                        li
+                            a(href="/html/vacancies.html").link.bold Вакансии
+                        li
+                            a(href="/html/faq.html").link.bold FAQ
+                        li
+                            a(href="/html/about.html").link.bold Запчасти
+                .col-xs-10.right-content
+                    section
+                        h2.yellow Аэроклуб
+                        P.bold.no-margin Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        P.no-margin Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        P Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet convallis dolor, nec dictum erat. Praesent eget lectus fermentum, consectetur metus sit amet, efficitur urna. Praesent interdum vitae eros et semper. Etiam quis nulla ut nulla pharetra luctus. Nam faucibus et arcu ac condimentum. Morbi ut faucibus nibh, nec commodo nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam a consequat odio.
+                        P.bold.no-margin Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        P.no-margin Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        P Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet convallis dolor, nec dictum erat. Praesent eget lectus fermentum, consectetur metus sit amet, efficitur urna. Praesent interdum vitae eros et semper. Etiam quis nulla ut nulla pharetra luctus. Nam faucibus et arcu ac condimentum. Morbi ut faucibus nibh, nec commodo nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam a consequat odio.
+                        P Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet convallis dolor, nec dictum erat. Praesent eget lectus fermentum, consectetur metus sit amet, efficitur urna. Praesent interdum vitae eros et semper. Etiam quis nulla ut nulla pharetra luctus. Nam faucibus et arcu ac condimentum. Morbi ut faucibus nibh, nec commodo nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam a consequat odio.
+                        .slider-container
+                            -for (var x = 0; x < 4; x++)
+                                .slide
+                                    img(src="img/basic.jpg")
+                        P.no-margin Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet convallis dolor, nec dictum erat. Praesent eget lectus fermentum, consectetur metus sit amet, efficitur urna. Praesent interdum vitae eros et semper. Etiam quis nulla ut nulla pharetra luctus.
+                        P Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet convallis dolor, nec dictum erat. Praesent eget lectus fermentum, consectetur metus sit amet, efficitur urna. Praesent interdum vitae eros et semper. Etiam quis nulla ut nulla pharetra luctus.
+                        P.bold Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        a.btn-yellow.link.bold.margin-top Вступить в клуб
+

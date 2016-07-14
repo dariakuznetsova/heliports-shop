@@ -1,0 +1,201 @@
+extends layout_final
+
+block content
+    .bg-color
+
+    .flywrap.an
+        section
+            .container
+                .heli-slider
+                    .slide
+                        img(src="./img/robinson.png")
+                        | <!-- координаты кнопки могут меняться, задаем в админке -->
+                        a.btn(href="#", style="position:absolute;top:60%;right:17.5%;") Попасть на премьеру
+                    .slide
+                        img(src="./img/robinson.png")
+                        a.btn(href="#", style="position:absolute;top:60%;right:17.5%;") Попасть на премьеру
+
+
+            .container-fluid
+                .services-home
+                    .col-xs-4
+                        a.h2 Обучение
+                        img(src="./img/m_learning.png")
+                        ul.link-list
+                            -list = ["Почувствуй себя пилотом", "Мастер-курс", "Первая ступень"]
+                            each item in list
+                                li
+                                    a.link= item
+                    .col-xs-4
+                        a.h2 Аренда
+                        img(src="./img/m_rent.png")
+                        ul.link-list
+                            -list = ["Robinson Helicopters","Eurocopter"]
+                            each item in list
+                                li
+                                    a.link= item
+                    .col-xs-4
+                        a.h2 Запчасти
+                        img(src="./img/m_parts.png")
+                        //ul.link-list
+                        //    -list = [""]
+                        //    each item in list
+                        //        li
+                        //            a.link= item
+
+            .container
+                //.col-xs-9
+                .col-xs-12
+                    h2.news-header Новости
+                    .news-slider
+                        .news-item
+                            a(href="#").img
+                                img(src="./img/news1.png")
+                            article
+                                a(href="#") Воздушное авиа-шоу для женщин от пилотов Хелипорта
+                                span.date 08.03.2016
+                                p Сегодня пилоты аэроклуба «Хелипорт Москва» поздравили всех женщин с 8 марта.
+                        .news-item
+                            a(href="#").img
+                                img(src="./img/news2.png")
+                            article
+                                a(href="#") Helitimes — газета для пилотов и любителей авиации
+                                span.date 09.03.2016
+                                p Вышел мартовский номер газеты для пилотов и любителей авиации HeliTimes.
+                        .news-item
+                            a(href="#").img
+                                img(src="./img/news1.png")
+                            article
+                                a(href="#") Воздушное авиа-шоу для женщин от пилотов Хелипорта
+                                span.date 08.03.2016
+                                p Сегодня пилоты аэроклуба «Хелипорт Москва» поздравили всех женщин с 8 марта.
+                        .news-item
+                            a(href="#").img
+                                img(src="./img/news2.png")
+                            article
+                                a(href="#") Helitimes — газета для пилотов и любителей авиации
+                                span.date 09.03.2016
+                                p Вышел мартовский номер газеты для пилотов и любителей авиации HeliTimes.
+
+
+                //.col-xs-3.butik-block
+                    a(href="#")
+                        img(src="./img/butik.png")
+                        | Авиабутик
+
+
+
+
+        section.catalog-top
+
+            a.h1(href="#") Продажа вертолетов
+
+            .container-fluid
+                .row
+                    each item in products
+                        .product.col-xs-3.text-center
+                            a.h1(href="#") #{item.name}
+                            a.img(href="#")
+                                img(src="img/"+item.img)
+                            .info
+                                ul.variants
+                                    each variant in item.variants
+                                        li
+                                            a(href="#") #{variant.name}
+                                            .price #{variant.price}
+            .container
+                ul.partners
+                    li
+                        a(href="#")
+                            img(src="img/brand_robinson.png")
+                    li
+                        a(href="#")
+                            img(src="img/brand_airbus.png")
+                    li
+                        a(href="#")
+                            img(src="img/brand_bell.png")
+                    li
+                        a(href="#")
+                            img(src="img/brand_rr.png")
+
+        section
+            .container
+                h1.upper.yellow Heliport Moscow
+                .row
+                    .col-xs-6
+                        h2.bold Частные вертолеты. <br> Продажа вертолетов в России.
+                        .row
+                            .col-xs-6
+                                p «Хелипорт Москва» - первый в Европе многофункциональный вертолетный комплекс, оказывающий полный спектр услуг по продаже, аренде и базированию вертолетов.
+                                p Вертолетное сообщение в Московском регионе активно развивается и пользуется все большим спросом. Вертолет – это прекрасная возможность не зависеть от услуг такси, расписания рейсов и других формальностей. И, что особенно ценно для делового человека, это шанс с максимальной выгодой спланировать график своих передвижений.
+                                p В многофункциональном вертолетном комплексе «Хелипорт Москва» вы сможете приобрести современный, мощный, комфортабельный вертолет любого из ведущих производителей США и Европы.
+
+                            .col-xs-6
+                                p Консультанты «Хелипорт Москва» расскажут о технических характеристиках и функциональных возможностях той или иной модели и помогут выбрать вертолет, исходя из ваших интересов и целей. Приоритеты нашей работы – высочайшее качество услуг и безопасность клиентов.
+                                p Москва – огромный мегаполис и, учитывая интенсивность наземных транспортных потоков и состояние магистралей, вертолет становится все более актуальным средством передвижения.
+                                p «Хелипорт Москва» рекомендует не откладывать решение и стать владельцем вертолета уже сегодня.
+                    .col-xs-6
+                        h2.bold День победы <br>и путешевствие на Эльбрус.
+                        .row
+                            .col-xs-12
+                                video(poster="img/design/sky.jpg", controls)
+                                    source(src="video/sky.webm", type="video/webm")
+                                    source(src="video/sky.mp4", type="video/mp4")
+                                    source(src="video/sky.ogv", type="video/ogg")
+
+
+                .become-pilot
+                    .glass
+                        .col-xs-3
+                            h2 Стань <br>пилотом:
+                        .col-xs-3
+                            h3
+                                a(href="#") Мастер-курс
+                            ul
+                                li
+                                    a 30 мин теории | 30 мин практики
+                                li
+                                    a 35 000 рублей
+                        .col-xs-3
+                            h3
+                                a(href="#") Первая ступень
+                            ul
+                                li
+                                    a 30 мин теории | 30 мин практики
+                                li
+                                    a 35 000 рублей
+                        .col-xs-3
+                            h3
+                                a(href="#") Почувствуй себя пилотом
+                            ul
+                                li
+                                    a 30 мин теории | 30 мин практики
+                                li
+                                    a 35 000 рублей
+
+
+    .container.full(style="display:none;")
+        .main-content
+            .row.services-home
+                -list = ["Обучение", "Вертолеты", "Аэротуризм"]
+                each item in list
+                    .col-xs-4
+                        a.bold.link.border.upper=item
+                        img(src="img/services.png")
+                        ul.link-list
+                            -list = ["Мастер курс", "Первая ступень", "Почувствуй себя пилотом"]
+                            each item in list
+                                li
+                                    a.link= item
+            .row.home-heli
+                -for (var x = 0; x < 4; x++)
+                    .col-xs-3
+                        h2.upper.yellow.bold Agusta Westland
+                        img(src="img/heli.png")
+                        -list = ["от 616 000 $", "от 732 000 $", "от 14 160 000 $"]
+                        each item in list
+                            p
+                                a.no-link R44 Raven I
+                                span=item
+                .col-xs-12
+                    a.btn-yellow.link.center.bold Приобрести вертолет в лизинг

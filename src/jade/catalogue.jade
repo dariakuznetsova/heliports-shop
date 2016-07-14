@@ -1,0 +1,124 @@
+extends layouts/layout_shop
+
+block content
+    .bg-color
+    .container.catalogue
+
+        .row
+            ul.breadcrumbs
+                li
+                    a(href="#")
+                        img(src='../img/shop-breadcrumps-home.png')
+                li
+                    a(href="#") Каталог
+                li
+                    a(href='#') Мужчинам
+
+
+            aside.col-xs-3
+                h2 Каталог
+                form
+                    ul.products-list
+                        li.products-item
+                            a(href='#').products-link Мужчинам
+                            ul.sub-list
+                                li
+                                    a(href='#') Бейсболки, шапки, шлемы
+                                li
+                                    a(href='#').active Толстовки, свитеры, джемперы
+                                li
+                                    a(href='#') Брюки, шорты, бермуды
+                                li
+                                    a(href='#') Куртки, ветровки, блейзеры
+                                li
+                                    a(href='#') Поло, футболки
+                        li.products-item
+                            a(href='#').products-link Женщинам
+                        li.products-item
+                            a(href='#').products-link Детям
+                        li.products-item
+                            a(href='#').products-link Обувь
+                        li.products-item
+                            a(href='#').products-link Оборудование
+                        li.products-item
+                            a(href='#').products-link Принадлежности
+                        li.products-item
+                            a(href='#').products-link Оборудование
+                        li.products-item
+                            a(href='#').products-link Принадлежности
+
+                    .slider
+                        .prices
+                            fieldset
+                                input(type="text" id="from" value="500").lower_price
+                                label(for="from").price__text P
+                            fieldset
+                                input(type="text" id="to" value="500000").upper_price
+                                label(for="to").price__text P
+                        .ui-slide
+                            div#priceslider
+
+                    .sizes-block
+                        ul
+                            - var sizes = ['XXS', 'XS', 'S', 'M', 'L', 'XL', 'XXL']
+                            each item in sizes
+                                li
+                                    label
+                                        input(type="checkbox").checked_elem
+                                        .checkbox-fake
+                                        = item
+                    .brands
+                        ul
+                            - var brands = ['Aeronautica Militare', 'Dstrezzed', 'Leatherman', 'Lightspeed Aviation', 'Bose', 'Heliport', 'Aviazione Navale', 'Marina Militare', 'Satorisan']
+                            each item in brands
+                                li
+                                    label
+                                        input(type="checkbox").checked_elem
+                                        .checkbox-fake
+                                        = item
+                    .sort-out
+                        label
+                            input(type="checkbox").checked_elem
+                            .checkbox-fake
+                            | В наличии
+                        br
+                        button(type='submit') Подобрать
+
+
+
+            .main-content.col-xs-9
+                .sort-block
+                    ul Сортировать по:&#160;&#160;&#160;&#160;
+                        li
+                            a(href='#') дате
+                        li
+                            a(href='#') цене
+                        li
+                            a(href='#') популярности
+                        li
+                            a(href='#') скидке
+
+                .products-wrap
+                    .catalog-section
+                        +prod("img/shop-prod1.png")
+                        +prod("img/shop-prod-2.png")
+                        +prod("img/shop-prod1.png")
+                    .catalog-section
+                        +prod("img/shop-prod3.png")
+                        +prod("img/shop-prod1.png")
+                        +prod("img/shop-prod-2.png")
+                    .catalog-section
+                        +prod("img/shop-prod3.png")
+                        +prod("img/shop-prod1.png")
+                        +prod("img/shop-prod-2.png")
+                    .pagination
+                        .wrap
+                            a(href='#').prev —предыдущая
+                            .pages
+                                span Страница
+                                div 1
+                                span из
+                                span 165
+                            a(href='#').next следующая—
+
+

@@ -1,0 +1,72 @@
+include includes/mixins
+doctype html
+
+html
+    head
+        meta(charset='utf-8')
+        meta(name="viewport",content="width=device-width, initial-scale=1.0")
+        link(href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css')
+        include includes/styles
+    body
+        header
+            .container
+                nav.top-nav
+                    .row
+                        .col-xs-2
+                            a(href="/").logo
+                        .col-xs-2.nav-item
+                            .row
+                                .col-xs-4.icon
+                                    img(src="img/design/wifi.png")
+                                .col-xs-8
+                                    a.link 126.7<br>AIP для пилотов
+                        .col-xs-2.nav-item
+                            .row
+                                .col-xs-4.icon
+                                    img(src="img/design/present.png")
+                                .col-xs-8
+                                    a.link Подарок при вступлении в клуб
+                        .col-xs-2.nav-item
+                            .row
+                                .col-xs-4.icon
+                                    img(src="img/design/angel10.png")
+                                .col-xs-8
+                                    a.link Добровольный спасательный отряд &laquo;Ангел&raquo;
+                        .col-xs-2.nav-item.phone
+                            .row
+                                .col-xs-4.icon
+                                    img(src="img/design/phonecall.png")
+                                .col-xs-8
+                                    p +7 (495) 77-000-77 <br> 8 (800) 707-44-77 <br>
+                                    a.yellow.bold.no-link Заказать звонок
+                        .col-xs-2.nav-item
+                            a(href="/").logo-shop
+                nav
+                    +menu(menu)(class="main-menu")
+        block content
+            | No content defined
+        .container
+            footer
+                .row
+                    .col-xs-12.services
+                        .row
+                            .col-xs-4
+                                a.link   Маршруты
+                            .col-xs-4
+                                a.link   Запчасти
+                            .col-xs-4
+                                a.link   Сервисный центр
+                    .col-xs-6
+                        .col-left
+                            .social
+                                a.icon-vkontakte
+                                a.icon-facebook
+                                a.icon-twitter
+                                a.icon-instagram
+                                a.icon-gplus
+                            p 500 метров от МКАД по Новорижскому шоссе<br>+7 (495) 77-000-77, 8 (800) 707-44-77 (круглосуточно)
+                            a Схема проезда
+                    .col-xs-6
+                        .col-right
+                            img(src="img/design/logorussia.png")
+        include includes/scripts

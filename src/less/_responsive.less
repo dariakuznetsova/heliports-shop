@@ -1,0 +1,35 @@
+@media (min-width: 1024px){
+  body{
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 1200px) {
+  .btn{
+    &.yellow{
+      .fs(14px);
+    }
+  }
+  .top-nav {
+    a,p{
+      .fs(12px);
+    }
+  }
+  .main-menu {
+    a{
+      .fs(14px);
+    }
+    &.promo{
+      > li{
+        max-width: none;
+      }
+    }
+    > li{
+      max-width: 100px;
+      margin-right: 20px;
+    }
+    .hide-nav a{
+      .fs(12px);
+    }
+  }
+}

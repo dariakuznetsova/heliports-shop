@@ -1,0 +1,140 @@
+extends layouts/layout_shop
+
+block content
+    .container.z-index
+        .lk.oformlenie_zakaza
+            h1 Оформление заказа
+            ul.menu-list
+                li
+                    a(href='#') Корзина
+                li
+                    a(href='#') Учетная запись
+                li
+                    a(href='#') Whishlist
+                li
+                    a(href='#') Заказы
+                li
+                    a(href='#') Выход
+            form
+                .h2 Основная информация
+                .left-block.main-info
+                    fieldset
+                        label.star E-mail:
+                        input(type='text')
+                    fieldset
+                        label.star Имя:
+                        input(type='text')
+                    fieldset
+                        label Фамилия:
+                        input(type='text')
+                    fieldset
+                        label.star Телефон:
+                        input(type='text')
+
+                .right-block.main-info
+                    fieldset
+                        label Улица, дом:
+                        input(type='text')
+                    fieldset
+                        label.star Индекс
+                        input(type='text')
+                        input(type='text')
+                        input(type='text')
+                    fieldset
+                        label Местоположение:
+                        input(type='text')
+                    fieldset
+                        label Дата доставки:
+                        input(type='text')
+                    fieldset
+                        label Время доставки:
+                        input(type='text')
+                .left-block.dostavka
+                    .h2 Способы доставки
+                    table
+                        tr
+                            td
+                                label
+                                    input(type="radio" name='dostavka').checked_elem
+                                    .checkbox-fake
+                                    | Самовывоз
+                            td
+                                span 0 ₽
+                        tr
+                            td
+                                label
+                                    input(type="radio" name='dostavka').checked_elem
+                                    .checkbox-fake
+                                    | Курьер (Москва)
+                            td
+                                span 500 ₽
+                        tr
+                            td Для формирования стоимости автоматизированной доставки заполните местоположение и индекс
+                            td
+                .left-block.oplata
+                    .h2 Способы оплаты
+                    label
+                            input(type="radio" name='oplata').checked_elem
+                            .checkbox-fake
+                            | Наличными при получении
+                    label
+                            input(type="radio" name='oplata').checked_elem
+                            .checkbox-fake
+                            | Банковской картой
+                .right-block
+                    .h2 Комментарии к заказу
+                    textarea
+                .left-block.tovary
+                    .h2 Товары в заказе
+                    table
+                        tr
+                            td.img
+                                img(src='./img/shop-cat-4.png')
+                            td.name
+                                p Кеды Satorisan
+                                p арт: Pilot Vintage brown
+                            td.select
+                                .offers-select
+                                    select
+                                        option XXXS
+                                        option XXS
+                                        option XS
+                                        option S
+                                        option M
+                                        option L
+                                        option XL
+                                        option XXL
+                                        option XXXL
+                            td.like
+                                a(href='#')
+                            td.quantity
+                                a(href='#') —
+                                span 12
+                                a(href='#') +
+                            td.price 8 500 ₽
+                            td.close
+                                a(href='#').close-icon
+
+                    .total-sum
+                        p Итого:
+                            span 36 000 ₽
+                    .make_order
+                        .back_link
+                            a(href='#') — Вернуться в каталог
+                        button(type='submit') Оформить заказ
+
+
+
+
+
+
+
+
+
+
+            //    p 500 метров от МКАД по Новорижскому шоссе
+            //    p.last 8 (800) 707-44-77 (круглосуточно)
+            //    a(href='#') Схема проезда
+
+
+

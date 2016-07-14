@@ -1,0 +1,150 @@
+include ../includes/mixins
+doctype html
+
+html.html
+    head
+        meta(charset='utf-8')
+        meta(name="viewport",content="width=device-width,initial-scale=1.0" class='viewport')
+        link(href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700&subset=latin,cyrillic,latin-ext,cyrillic-ext' rel='stylesheet' type='text/css')
+        include ../includes/styles
+        script(src='//api-maps.yandex.ru/2.1/?lang=ru_RU' type="text/javascript")
+    body.parts
+        .main-content-wrapper
+            header
+                nav.top-nav
+                    .col.logo-parts
+                        a(href="parts_main.html")
+                            img(src='img/heli-parts/heliports-parts-logo.png' alt='лого')
+                    .col.enter-menu
+                        .mini-menu
+                            a(href="#") Вход
+                            span |
+                            a(href="#") Регистрация
+                    .col.order_the_call
+                        .phone
+                            b +7 903 744-27-70 <br>
+                            a.yellow.no-link Заказать звонок
+                    .col.langs
+                        .rus.langs-active
+                            a(href='#') Rus
+                        .eng
+                            a(href='#') Eng
+                nav.heli-russia
+                    .shop-menu.an
+                        ul
+                            li.first-li
+                                a(href="parts_zapchasti.html").after-elem.inner-link-first Запчасти
+                                ul.inner-list
+                                    li
+                                        a(href='#').title_link
+                                            h2 Robinson
+                                        ul.inner-list_subgroups
+                                            li
+                                                a(href='#') R22
+                                            li
+                                                a(href='#') R44
+                                            li
+                                                a(href='#') R44 Raven I
+                                            li
+                                                a(href='#') R44 Raven II
+                                            li
+                                                a(href='#') R66
+                                    li
+                                        a(href='#').title_link
+                                            h2 Airbus
+                                        ul.inner-list_subgroups
+                                            li
+                                                a(href='#') EC130T2
+                                            li
+                                                a(href='#') AS350B3
+                                            li
+                                                a(href='#') AS350B3E
+                                    li
+                                        p.for Для двигателей
+                                        a(href='#').title_link
+                                            h2 Turbomeca (Airbus)
+                                        ul.inner-list_subgroups
+                                            li
+                                                a(href='#') EC130T2
+                                            li
+                                                a(href='#') AS350B3
+                                    li
+                                        p.for Для двигателей
+                                        a(href='#').title_link
+                                            h2 Lycoming (R44)
+                                        ul.inner-list_subgroups
+                                            li
+                                                a(href='#') R44 Raven I
+                                            li
+                                                a(href='#') R44 Raven II
+                                    li
+                                        a(href='#').title_link
+                                            h2 Аксессуары
+
+                            li
+                                a(href="parts_TO.html") Комплекты ТО
+                            li
+                                a(href="parts_radio.html") Радиооборудование
+                            li
+                                a(href="parts_service.html") Сервис
+                            li
+                                a(href="parts_to_pilots.html") Пилотам
+                            li: a(href="parts_dostavka.html") Доставка
+                            li: a(href="parts_contacts.html") Контакты
+                .search-block.top-nav
+                    .col.search
+                        form
+                            input(name="q", type="text", placeholder="Введите название, или код, или артикул детали")
+                            input(type="submit")
+                    .col.basket
+                         a.bsk(href="#")
+                             .cnt 12
+                         .price 256 000 ₽
+                         a.order(href="#") Оформить заказ
+                    .example_search
+                        p Например:
+                            a(href='#') RAM-B-166-AP14U, редукторное масло.
+                            | Для поиска нескольких деталей вводите артикул через запятую.
+            main
+                block content
+                    | No content defined
+
+
+            //video.bg-video(autoplay poster="img/design/sky.jpg")
+            //    source(src="video/sky.webm" type="video/webm")
+            //    source(src="video/sky.mp4" type="video/mp4")
+            //    source(src="video/sky.ogv" type="video/ogg")
+            //.video-modal
+            //    video(poster="img/design/sky.jpg", controls)
+            //        source(src="video/sky.webm", type="video/webm")
+            //        source(src="video/sky.mp4", type="video/mp4")
+            //        source(src="video/sky.ogv", type="video/ogg")
+            footer.an
+                hr
+                .foot
+                    .col.left
+                        .tels
+                            .small © 2016 Heliport Moscow
+                            p +7 (903) 744-27-70
+                                br
+                                span Parts@vertolet.ru
+                        .address
+                            p Московская область, Истринский район,
+                                br
+                                | Буньково, с/пос. Лучинское, дер. Крючково,
+                                br
+                                | ул. Вишнёвая, стр.1
+
+                    .col.right
+                        .social
+                            a.icon-vkontakte
+                            a.icon-facebook
+                            a.icon-twitter
+                            a.icon-instagram
+                            a.icon-gplus
+                        .map
+                            a(href='#') Схема проезда
+                            .map-icon
+
+
+        include ../includes/scripts

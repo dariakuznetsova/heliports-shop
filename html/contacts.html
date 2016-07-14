@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700&amp;subset=latin,cyrillic,latin-ext,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/template_styles.css">
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  </head>
+  <body>
+    <header class="container">
+      <div class="row">
+        <nav class="top-nav an">
+          <div class="col"><a href="/" class="logo logo-shop"></a></div>
+          <div class="col basket"><a href="#" class="bsk">
+              <div class="cnt">12</div></a>
+            <div class="price">256 000 ₽</div><a href="#" class="order">Оформить заказ</a>
+          </div>
+          <div class="col">
+            <div class="mini-menu"><a href="#">Вход</a><span>|</span><a href="#">Регистрация</a></div>
+            <!--.mini-menu
+            a(href="#") Профиль
+            span |
+            a(href="#") Whishlist
+            -->
+          </div>
+          <div class="col">
+            <div class="phone"><b>+7 (903) 744-27-70 <br></b><a class="yellow no-link">Заказать звонок</a></div>
+          </div>
+          <div class="col search">
+            <form>
+              <input name="q" type="text" placeholder="Поиск">
+              <input type="submit">
+            </form>
+          </div>
+        </nav>
+        <nav class="shop-menu an">
+          <ul>
+            <li><a href="#">Каталог</a></li>
+            <li><a href="#">Бренды</a></li>
+            <li><a href="#">Доставка и оплата</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="bg-color"></div>
+    <div class="container">
+      <div class="contacts">
+        <h1>Контакты</h1>
+        <div class="left-block">
+          <div class="map">
+            <div id="map_shop"></div>
+          </div>
+          <script>
+            ymaps.ready(function () {
+                init_contacts(55.8, 37.8);
+            });
+            function init_contacts (c,d) {
+                var myMap2 = new ymaps.Map("map_shop", {
+                        center: [55.80896904881843,37.39338516529843],
+                        zoom: 15
+                    }, {
+                        searchControlProvider: 'yandex#search'
+                    }),
+            
+                    myGeoObject2 = new ymaps.GeoObject({
+                        draggable: true
+                    });
+            
+                myMap2.geoObjects
+                    .add(myGeoObject2)
+                    .add(new ymaps.Placemark([c, d], {
+                    }, {
+                        iconLayout: 'default#image',
+                        iconImageSize: [28, 37],
+                        iconImageHref: '../img/heli-icon-red.png'
+                    }))
+            }
+          </script>
+          <div class="print_button"><a href="javascript:window.print()" class="print__link">Распечатать</a></div>
+        </div>
+        <div class="right-block">
+          <p>500 метров по МКАД по Новорижскому шоссе<br>Круглосуточный телефон:<span>+7 (495) 77-000-77 (2118)</span></p>
+          <p>Часы работы:<span>с 9:00 до 21:00</span></p>
+          <p>Бесплатный трансфер от:</p>
+          <p>Строгино (каждый день с 9:00 до 20:00)</p>
+          <p><img src="./img/autobus.png" alt="Автобус Heliport"></p>
+          <p>Не забудьте согласовать свой заказ.<br>Это можно сделать, связавшись с администрацией<br>Хелипорт Москва по телефону:<span>+7(495) 77 000 77.</span></p>
+        </div>
+      </div>
+    </div>
+    <video poster="img/design/sky.jpg" class="bg-video">
+      <source src="video/sky.webm" type="video/webm">
+      <source src="video/sky.mp4" type="video/mp4">
+      <source src="video/sky.ogv" type="video/ogg">
+    </video>
+    <div class="video-modal">
+      <video poster="img/design/sky.jpg" controls>
+        <source src="video/sky.webm" type="video/webm">
+        <source src="video/sky.mp4" type="video/mp4">
+        <source src="video/sky.ogv" type="video/ogg">
+      </video>
+    </div>
+    <div class="popup-window feedbackForm">
+      <p>Введите ваше имя и телефон.<br>Мы свяжемся с вами в ближайшее время.</p>
+      <form>
+        <div class="feed-error"></div>
+        <div class="feed-result"></div>
+        <div class="feed-body"></div>
+        <input type="text" placeholder="Ваше имя" class="feed-name your_name">
+        <input type="text" placeholder="+7(___)__-__-__" class="feed-phone your_tel">
+        <input type="hidden" class="feed-comment">
+        <button type="submit">Отправить</button>
+      </form>
+    </div>
+    <footer class="container an">
+      <hr>
+      <div class="foot">
+        <div class="col">
+          <p>500 метров от МКАД по Новорижскому шоссе<br>+7 (495) 77-000-77, 8 (800) 707-44-77 (круглосуточно)</p><a class="map">Схема проезда</a>
+        </div>
+        <div class="col social"><a class="icon-vkontakte"></a><a class="icon-facebook"></a><a class="icon-twitter"></a><a class="icon-instagram"></a><a class="icon-gplus"></a></div>
+        <div class="col search">
+          <form>
+            <input name="q" type="text" placeholder="Поиск">
+            <input type="submit">
+          </form>
+        </div>
+        <div class="col"><a href="#" class="site-selector"><img src="img/design/logorussia.png"></a></div>
+      </div><small>© 2016 Heliport Moscow</small>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+{
+    "build_path": "./html/",
+    "src_path": "./src/",
+    "nm": "../../node_modules/",
+    "enable_browser_sync": true,
+    "pname": "main",
+    "path_tpl": "./html/",
+    "path_css": "./html/css/template_styles.css",
+    "path_js":  "./html/js/script.js",
+    "path_img": "./images/",
+    "bower_ran": true
+}

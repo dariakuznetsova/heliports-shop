@@ -1,0 +1,36 @@
+extends layouts/layout_shop
+
+block content
+    .container
+        .lk.oformlenie_zakaza.authorization
+            h1 Личный кабинет
+
+            .title Авторизуйтесь
+            form
+                .left-block
+                    fieldset
+                        label E-mail:
+                        input(type='text')
+                    fieldset
+                        label Пароль:
+                        input(type='text')
+                    fieldset
+                        label
+                            input(type="checkbox").checked_elem
+                            .checkbox-fake
+                            | Запомнить меня на этом компьютере
+                    fieldset
+                        button(type='submit') Войти
+
+            a(href='#') Регистрация
+            a(href='#') Забыли пароль?
+
+
+
+
+            //    p 500 метров от МКАД по Новорижскому шоссе
+            //    p.last 8 (800) 707-44-77 (круглосуточно)
+            //    a(href='#') Схема проезда
+
+
+

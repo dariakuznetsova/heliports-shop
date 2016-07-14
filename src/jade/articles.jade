@@ -1,0 +1,43 @@
+extends layout
+
+block content
+    .bg-color
+    .container
+        .main-content
+            h1 О проекте
+            .row
+                .col-xs-2
+                    ul.side-bar
+                        li
+                            a(href="/html/about.html").link.bold.current О нас
+                        li
+                            a(href="/html/about.html").link.bold Бутик
+                        li
+                            a(href="/html/pilots.html").link.bold Наши пилоты
+                        li
+                            a(href="/html/routes.html").link.bold Маршруты
+                        li
+                            a(href="/html/video.html").link.bold Видео
+                        li
+                            a(href="/html/about.html").link.bold Фотогалерея
+                        li
+                            a(href="/html/press.html").link.bold Пресса
+                        li
+                            a(href="/html/articles.html").link.bold Статьи
+                        li
+                            a(href="/html/airclub.html").link.bold Аэроклуб
+                        li
+                            a(href="/html/vacancies.html").link.bold Вакансии
+                        li
+                            a(href="/html/faq.html").link.bold FAQ
+                        li
+                            a(href="/html/about.html").link.bold Запчасти
+                .col-xs-10.right-content
+                    h2.yellow Статьи
+                    .row
+                        -for(var x = 0; x < 18; x++)
+                            .col-xs-4.news-item
+                                a.round-photo(style="background-image: url(img/basic.jpg)")
+                                a.link.bold Заседание комиссии при Президенте Заседание комиссии при Президенте
+                                p 21.06.2015
+                                p.small-text Praesent interdum vitae eros et semper. Etiam quis nulla ut nulla pharetra luctus. Nam faucibus et arcu ac condimentum. Morbi ut faucibus nibh, nec commodo nisl.

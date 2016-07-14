@@ -1,0 +1,31 @@
+extends layout
+
+block content
+    .bg-color
+    .container
+        .main-content
+            h1 Аренда вертолетов
+            .row.promo-block
+                .col-xs-5
+                    p   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ex tellus, rhoncus eu mattis ac, eleifend et leo. Vivamus a justo risus. Ut cursus nunc libero, in porttitor magna commodo sit amet.
+                    p   Cras dignissim sodales cursus. Mauris ipsum lectus, bibendum mollis gravida vitae, semper vel eros. Sed porta luctus faucibus. Suspendisse lorem diam, gravida et risus eu, vestibulum auctor mi. In at ipsum dui. Morbi viverra est sit amet lorem lobortis placerat. Aenean et rutrum sapien. Curabitur condimentum ac neque eu ultrices. Proin vel porta lacus.
+                    p   Aliquam vulputate lacus ac lacus bibendum, vel elementum sapien volutpat. Curabitur eget condimentum enim. Aenean bibendum vitae justo nec gravida. Phasellus finibus placerat turpis.
+                .col-xs-5
+                    p   Cras dignissim sodales cursus. Mauris ipsum lectus, bibendum mollis gravida vitae, semper vel eros. Sed porta luctus faucibus. Suspendisse lorem diam, gravida et risus eu, vestibulum auctor mi. In at ipsum dui. Morbi viverra est sit amet lorem lobortis placerat. Aenean et rutrum sapien. Curabitur condimentum ac neque eu ultrices. Proin vel porta lacus.
+                    p   Aliquam vulputate lacus ac lacus bibendum, vel elementum sapien volutpat. Curabitur eget condimentum enim. Aenean bibendum vitae justo nec gravida. Phasellus finibus placerat turpis.
+            .row.rent-container
+                h2.yellow.bold.col-xs-12 Стоимость часа аренды
+                -for(var x = 0; x < 4; x++)
+                    h2.bold.center Robinson Helicopters
+                    -for(var j = 0; j < 4; j++)
+                        .col-xs-6.shop-item
+                            .row
+                                .col-xs-6
+                                    img(src='img/heli.png')
+                                .col-xs-6
+                                    a.link.bold.title(href='/html/catalog.element-prototype.html') Robinson R44 Raven I
+                                    p.time-icon.bold 3
+                                    p.time-icon.bold 240 км/ч
+                                    p.time-icon.bold 619 км
+                                    p.bold.big.yellow.price 33 000 р/час
+                                    a.btn-yellow.link.bold Арендовать

@@ -1,0 +1,99 @@
+include ../includes/mixins
+doctype html
+
+html
+    head
+        meta(charset='utf-8')
+        meta(name="viewport",content="width=device-width,initial-scale=1.0")
+        link(href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700&subset=latin,cyrillic,latin-ext,cyrillic-ext' rel='stylesheet' type='text/css')
+        include ../includes/styles
+        script(src='//api-maps.yandex.ru/2.1/?lang=ru_RU' type="text/javascript")
+    body
+        header.container
+            .row
+                nav.top-nav.an
+                    .col
+                        a(href="/").logo.logo-shop
+                    .col.basket
+                        a.bsk(href="#")
+                            .cnt 12
+                        .price 256 000 ₽
+                        a.order(href="#") Оформить заказ
+                    .col
+                        .mini-menu
+                            a(href="#") Вход
+                            span |
+                            a(href="#") Регистрация
+                        //.mini-menu
+                            a(href="#") Профиль
+                            span |
+                            a(href="#") Whishlist
+                    .col
+                        .phone
+                            b +7 (903) 744-27-70 <br>
+                            a.yellow.no-link Заказать звонок
+                    .col.search
+                        form
+                            input(name="q", type="text", placeholder="Поиск")
+                            input(type="submit")
+                nav.shop-menu.an
+                    ul
+                        li: a(href="#") Каталог
+                        li: a(href="#") Бренды
+                        li: a(href="#") Доставка и оплата
+                        li: a(href="#") О нас
+                        li: a(href="#") Новости
+                        li: a(href="#") Контакты
+
+        .bg-color
+        block content
+            | No content defined
+
+
+        video.bg-video(poster="img/design/sky.jpg")
+            source(src="video/sky.webm" type="video/webm")
+            source(src="video/sky.mp4" type="video/mp4")
+            source(src="video/sky.ogv" type="video/ogg")
+        .video-modal
+            video(poster="img/design/sky.jpg", controls)
+                source(src="video/sky.webm", type="video/webm")
+                source(src="video/sky.mp4", type="video/mp4")
+                source(src="video/sky.ogv", type="video/ogg")
+        .popup-window.feedbackForm
+            p Введите ваше имя и телефон.
+                br
+                | Мы свяжемся с вами в ближайшее время.
+            form
+                .feed-error
+                .feed-result
+                .feed-body
+                input(type='text' placeholder='Ваше имя').feed-name.your_name
+                input(type='text' placeholder='+7(___)__-__-__').feed-phone.your_tel
+                input(type='hidden').feed-comment
+                button(type='submit') Отправить
+
+
+
+        footer.container.an
+            hr
+            .foot
+                .col
+                    p 500 метров от МКАД по Новорижскому шоссе<br>+7 (495) 77-000-77, 8 (800) 707-44-77 (круглосуточно)
+                    a.map Схема проезда
+
+                .col.social
+                    a.icon-vkontakte
+                    a.icon-facebook
+                    a.icon-twitter
+                    a.icon-instagram
+                    a.icon-gplus
+                .col.search
+                    form
+                        input(name="q", type="text", placeholder="Поиск")
+                        input(type="submit")
+                .col
+                    a.site-selector(href="#")
+                        img(src="img/design/logorussia.png")
+
+            small © 2016 Heliport Moscow
+        include ../includes/scripts

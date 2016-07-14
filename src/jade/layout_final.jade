@@ -1,0 +1,68 @@
+include includes/mixins
+doctype html
+
+html
+    head
+        meta(charset='utf-8')
+        meta(name="viewport",content="width=device-width, initial-scale=1.0")
+        include includes/styles
+    body
+        header.container
+            .row
+                nav.top-nav.an
+                    .col
+                        a(href="/").logo
+                    .col
+                        a.aip 126.7 <br>AIP для пилотов
+                    .col
+                        a.angel Добровольный <br>спасательный<br>отряд «Ангел»
+                    .col
+                        a.club Вступайте <br>в аэроклуб
+                    .col
+                        .phone
+                            b +7 (495) 77-000-77 <br> 8 (800) 707-44-77 <br>
+                            a.yellow.no-link Заказать звонок
+                    //.col
+                    //    a(href="/").logo-shop
+                    .col
+                        a.lang.active Rus
+                        a(href="#").lang Eng
+                nav.mmenu.an
+                    +mmenu(menu)
+
+
+        block content
+            | No content defined
+
+        video.bg-video(autoplay poster="img/design/sky.jpg")
+            source(src="video/sky.webm" type="video/webm")
+            source(src="video/sky.mp4" type="video/mp4")
+            source(src="video/sky.ogv" type="video/ogg")
+        footer.container.an
+            .fmenu
+                a.map Маршруты
+                a.tool Запчасти
+                a.service Сервисный центр
+
+            hr
+            .foot
+                .col
+                    p 500 метров от МКАД по Новорижскому шоссе<br>+7 (495) 77-000-77, 8 (800) 707-44-77 (круглосуточно)
+                    a.map Схема проезда
+
+                .col.social
+                    a.icon-vkontakte
+                    a.icon-facebook
+                    a.icon-twitter
+                    a.icon-instagram
+                    a.icon-gplus
+                .col.search
+                    form
+                        input(name="q", type="text", placeholder="Поиск")
+                        input(type="submit")
+                .col
+                    a.site-selector(href="")
+                        img(src="img/design/logorussia.png")
+
+            small 2016 Heliport Moscow
+        include includes/scripts

@@ -1,0 +1,27 @@
+{
+  "_comment":  "Тут можно сохранить данные которые потом будут использоваться в jade",
+  "__comment": "Имя файла должно совпадать с шаблоном в который мы это передаем",
+  "___comment":"default грузится в дополнение к остальным не найден с именем файла",
+  "products": [
+    {
+      "name":"Lorem Ipsum",
+      "description":"lorem ipsum dolor amet lorem ipsum dolor amet lorem ipsum dolor amet lorem ipsum dolor amet",
+      "price":"3000"
+    },
+    {
+      "name":"Ipsum Dolor",
+      "description":"lorem ipsum dolor amet lorem ipsum dolor amet lorem ipsum dolor amet lorem ipsum dolor amet",
+      "price":"21000"
+    },
+    {
+      "name":"Lorem",
+      "description":"lorem ipsum dolor amet lorem ipsum dolor amet lorem ipsum dolor amet lorem ipsum dolor amet",
+      "price":"14000"
+    },
+    {
+      "name":"Dolor Ipsum",
+      "description":"lorem ipsum dolor amet lorem ipsum dolor amet lorem ipsum dolor amet lorem ipsum dolor amet"
+      "price":"16000"
+    }
+  ]
+}

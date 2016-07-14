@@ -1,0 +1,127 @@
+extends layout
+
+block content
+    .bg-color
+    .container
+        .main-content
+            h1 Услуги комплекса
+            .row
+                .col-xs-2
+                    ul.side-bar.fixed-nav
+                        -list = ["ПО и сервис", "Заправка", "Страхование","Лизинг", "Регистрация и сертификация", "Тюнинг", "Базирование"]
+                        each item,index in list
+                            li
+                                a(href="#section-#{index+1}").no-link.bold=item
+                        li
+                            a.link.bold Запчасти
+                .col-xs-10.right-content
+                    section#section-1
+                        h2.yellow ПО и Сервис
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet convallis dolor, nec dictum erat. Praesent eget lectus fermentum, consectetur metus sit amet, efficitur urna. Praesent interdum vitae eros et semper. Etiam quis nulla ut nulla pharetra luctus. Nam faucibus et arcu ac condimentum. Morbi ut faucibus nibh, nec commodo nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam a consequat odio. <br> Ut pellentesque ultricies neque non rhoncus. Donec nec pulvinar ipsum. Curabitur posuere nec nisl non facilisis. Aliquam pretium sodales lectus id laoreet. Maecenas rutrum odio ut ipsum consequat, vel molestie lectus porta. Aenean pellentesque, nulla vitae congue semper, sapien tellus faucibus mauris, vitae luctus tellus odio accumsan metus. Integer egestas nulla quis auctor vehicula.
+                        .basic-img-container
+                            img.border(src="img/basic.jpg")
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet convallis dolor, nec dictum erat. Praesent eget lectus fermentum, consectetur metus sit amet, efficitur urna.
+                        p Praesent interdum vitae eros et semper. Etiam quis nulla ut nulla pharetra luctus. Nam faucibus et arcu ac condimentum. Morbi ut faucibus nibh, nec commodo nisl.
+                    section#section-2
+                        h2.yellow Заправка
+                        .basic-img-container
+                            img.border(src="img/basic.jpg")
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet convallis dolor, nec dictum erat. Praesent eget lectus fermentum, consectetur metus sit amet, efficitur urna.
+                        table.small
+                            tr
+                                td Авиационный бензин 100LL
+                                td.bold 112 руб/л
+                            tr
+                                td Керосин ТС-1
+                                td.bold 45 руб/л
+                            tr
+                                td Выезд авиатехника ГСМ с 20:00 до 8:00, осуществление заправки ВС
+                                td.bold 2000 руб
+                        p Все ночные заправки неоьходимо согласовывать <br>с Руководителем службы ГСМ по номеру:
+                            a.bold.yellow.margin-left +7 910 429-98-24
+                    section#section-3
+                        h2.yellow Страхование
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet convallis dolor, nec dictum erat. Praesent eget lectus fermentum, consectetur metus sit amet, efficitur urna.
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet convallis dolor, nec dictum erat. Praesent eget lectus fermentum, consectetur metus sit amet, efficitur urna.
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet convallis dolor, nec dictum erat. Praesent eget lectus fermentum, consectetur metus sit amet, efficitur urna.
+                        p.no-margin Выбирая нас, Вы получаете:
+                        ul.margin-bottom
+                            -for (var x = 0; x < 9; x++)
+                                li - Топ 5 лучших страховых компаний Росиии
+                        h3.bold  Расчет стоимости страхового полиса ГО и КАСКО
+                        .yellow-select
+                            select
+                                -for (var x = 0; x < 4; x++)
+                                    option  Robinson R44
+                        .yellow-select.big-select
+                            select
+                                -for (var x = 0; x < 4; x++)
+                                    option  Гражданская ответсвенность
+                        p Итогова сумма:
+                            span.big.bold.yellow 17 500 Р
+                    section#section-4
+                        h2.yellow Лизинг
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet convallis dolor, nec dictum erat. Praesent eget lectus fermentum, consectetur metus sit amet, efficitur urna.
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet convallis dolor, nec dictum erat. Praesent eget lectus fermentum, consectetur metus sit amet, efficitur urna. Praesent interdum vitae eros et semper. Etiam quis nulla ut nulla pharetra luctus. Nam faucibus et arcu ac condimentum. Morbi ut faucibus nibh, nec commodo nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam a consequat odio.
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet convallis dolor, nec dictum erat. Praesent eget lectus fermentum, consectetur metus sit amet, efficitur urna.
+                        p Вы можете связаться со специалистом по лизингу по прямому телефону:
+                            a.bold.big.yellow +7 910 429-98-24
+                    section#section-5
+                        h2.yellow Регистрация и сертификация
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet convallis dolor, nec dictum erat. Praesent eget lectus fermentum, consectetur metus sit amet, efficitur urna.
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet convallis dolor, nec dictum erat. Praesent eget lectus fermentum, consectetur metus sit amet, efficitur urna. Praesent interdum vitae eros et semper. Etiam quis nulla ut nulla pharetra luctus. Nam faucibus et arcu ac condimentum. Morbi ut faucibus nibh, nec commodo nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam a consequat odio.
+                        .row
+                            .col-xs-6
+                                img.border(src="img/reg.jpg")
+                            .col-xs-6
+                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet convallis dolor, nec dictum erat. Praesent eget lectus fermentum, consectetur metus sit amet, efficitur urna.
+                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet convallis dolor, nec dictum erat. Praesent eget lectus fermentum, consectetur metus sit amet, efficitur urna.
+                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet convallis dolor, nec dictum erat. Praesent eget lectus fermentum, consectetur metus sit amet, efficitur urna. Praesent interdum vitae eros et semper. Etiam quis nulla ut nulla pharetra luctus. Nam faucibus et arcu ac condimentum. Morbi ut faucibus nibh, nec commodo nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam a consequat odio.
+                    section#section-6
+                        h2.yellow Тюнинг
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet convallis dolor, nec dictum erat. Praesent eget lectus fermentum, consectetur metus sit amet, efficitur urna.
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet convallis dolor, nec dictum erat. Praesent eget lectus fermentum, consectetur metus sit amet, efficitur urna. Praesent interdum vitae eros et semper. Etiam quis nulla ut nulla pharetra luctus. Nam faucibus et arcu ac condimentum. Morbi ut faucibus nibh, nec commodo nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam a consequat odio.
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet convallis dolor, nec dictum erat. Praesent eget lectus fermentum, consectetur metus sit amet, efficitur urna.
+                        -for (var y = 0; y < 4; y++)
+                            h3 Robinson R44
+                            .slider-container
+                                -for (var x = 0; x < 4; x++)
+                                    .slide
+                                        img(src="img/basic.jpg")
+                    section#section-7
+                        h2.yellow Базирование
+                        p.no-margin Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet convallis dolor, nec dictum erat. Praesent eget lectus fermentum, consectetur metus sit amet, efficitur urna.
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet convallis dolor, nec dictum erat. Praesent eget lectus fermentum, consectetur metus sit amet, efficitur urna.
+                        .basic-img-container
+                            img.border(src="img/basic.jpg")
+                        table.big-table
+                            thead
+                                tr
+                                    td.bold Вертолеты
+                                    td.bold Уличное хранение
+                                    td.bold Неотапливаемый ангар
+                                        span.thin    (01:04 - 01:10)
+                                    td.bold Отапливаемый ангар
+                                        span.thin    (01:04 - 01:10)
+                            tbody
+                                tr
+                                    td  Robinson 44- 66
+                                    td.center  45 000 Р
+                                    td.center  61 000 Р
+                                    td.center  71 000 Р
+                                tr
+                                    td  3-4 лопастной
+                                    td.center  120 000 Р
+                                    td.center  165 000 Р
+                                    td.center  190 000 Р
+                                tr
+                                    td  3-4 лопастной<br>
+                                        i (складывающиеся лопасти)
+                                    td.center  120 000 Р
+                                    td.center  165 000 Р
+                                    td.center  190 000 Р
+                        -for (var y = 0; y < 4; y++)
+                            p.no-margin Стоимость взлета.посадки в дневное время (с 8:00 до 20:00) составляет:
+                            ul.margin-bottom
+                                -for (var x = 0; x < 4; x++)
+                                    li Robinson R44/R66 - 1500 рублей (включая 1 час стоянки)

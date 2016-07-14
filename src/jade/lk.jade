@@ -1,0 +1,69 @@
+extends layouts/layout_shop
+
+block content
+    .container
+        .lk
+            h1 Личный кабинет
+            ul.menu-list
+                li
+                    a(href='basket.html') Корзина
+                li.active-item
+                    a(href='/') Учетная запись
+                li
+                    a(href='wishlist.html') Wishlist
+                li
+                    a(href='lk-zakazy.html') Заказы
+                li
+                    a(href='#') Выход
+            form
+                .left-block
+                    fieldset
+                        label E-mail:
+                        input(type='text')
+                    fieldset
+                        label Имя:
+                        input(type='text')
+                    fieldset
+                        label Фамилия:
+                        input(type='text')
+                    fieldset
+                        label Телефон:
+                        input(type='text')
+                    fieldset
+                        label Новый пароль:
+                        input(type='text')
+                    fieldset
+                        label Повторить пароль:
+                        input(type='text')
+
+                .right-block
+                    fieldset
+                        label Страна:
+                        input(type='text')
+                    fieldset
+                        label Область/ край
+                        input(type='text')
+                    fieldset
+                        label Город:
+                        input(type='text')
+                    fieldset
+                        label Улица, дом:
+                        input(type='text')
+                    fieldset
+                        label Индекс:
+                        input(type='text')
+                    fieldset
+                        label Доп. информация
+                        textarea(type='text')
+                    fieldset
+                        button(type='submit') Изменить
+
+
+
+
+            //    p 500 метров от МКАД по Новорижскому шоссе
+            //    p.last 8 (800) 707-44-77 (круглосуточно)
+            //    a(href='#') Схема проезда
+
+
+

@@ -1,0 +1,55 @@
+extends layout
+
+block content
+    .bg-color
+    .container
+        .main-content
+            h1 Пилотам
+            .link-line
+                    a.yellow.bold.link(href='') AIP
+                    a.yellow.bold.link(href='')
+                        | Федеральные
+                        br
+                        | авиационные правила
+                        i (PDF, 2МБ)
+                    a.yellow.bold.link(href='')
+                        | Навигационный
+                        br
+                        | рассвет и закат
+            p.pilots-info
+
+                | METAR text: UUWW 020800Z 18006MPS 9999 SCT014 OVC042 M01/M03 Q1003 R24/510250 NOSIG
+                br
+                |           Conditions at: UUWW (MOSCOW/VNUKOVO , RU) observed 0800 UTC 02 February 2016
+                br
+                |           Temperature: -1.0°C (30°F)
+                br
+                |           Dewpoint: -3.0°C (27°F) [RH = 86%]
+                br
+                |           Pressure (altimeter): 29.62 inches Hg (1003.0 mb)
+                br
+                |           Winds: from the S (180 degrees) at 14 MPH (12 knots; 6.2 m/s)
+                br
+                |           Visibility: 6 or more miles (10+ km)
+                br
+                |           Ceiling: 4200 feet AGL
+                br
+                |           Clouds: scattered clouds at 1400 feet AGL overcast cloud deck at 4200 feet AGL
+                br
+                -for(var x = 0; x < 14; x++)
+                    |           Weather: no significant weather observed at this time
+                    br
+                    |           Forecast for: UUWW (MOSCOW/VNUKOVO , RU)
+                    br
+                    |           Text: TAF UUWW 020450Z 0206/0306 19006MPS 9000 BKN007 TX01/0218Z TNM03/0207Z
+                    br
+                    |           Forecast period: 0600 to 1000 UTC 02 February 2016
+                    br
+                    |           Forecast type: FROM: standard forecast or significant change
+                    br
+                    |           Winds: from the S (190 degrees) at 14 MPH (12 knots; 6.2 m/s)
+                    br
+                    |           Visibility: 6 miles (9 km)
+                    br
+                    |           Ceiling: 700 feet AGL Clouds: broken clouds at 700 feet AGL
+                    br

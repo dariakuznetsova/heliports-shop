@@ -1,0 +1,490 @@
+extends layouts/layout_russia
+
+block content
+    .container
+        .heliports-of-russia.main-page
+            .col-xs-12.title.first
+                .col-xs-6.main-img
+                    img(src='img/heli-main_logo.png' alt='логотип')
+                .col-xs-6
+                    h1 Хелипорты России
+                    p.
+                        Уникальный, не имеющий аналогов проект всероссийского масштаба по созданию крупнейшей сети вертолётных комплексов. Его основной задачей является развитие принципиально новой бизнес-модели транспортной сети, которая свяжет города Московской области и всей страны, а также откроет широкие возможности для малой авиации.
+                    .download
+                        a(href='#') Скачать презентацию
+
+            .col-xs-12.title.news
+                h2
+                    a(href='#') Новости
+                -for(var x = 0; x < 4; x++)
+                    .col-xs-3.news-item
+                        .img
+                            img(src='img/news-pic.jpg')
+                        a.link.bold Начат предварительный этап строительных работ в «Хелипорт Калуга»
+                        p 24.04.2016
+                        p.small-text Хелипорт «Калуга» - беспрецедентный региональный проект, который реализуется при поддержке Правительства.
+                        a.read_more(href='#') Читать далее
+
+            .col-xs-12.title.map-title
+                .col.col-xs-12
+                    h2 Сеть хелипортов России
+            .col-xs-12.map
+                    img(src='img/map.png')
+                    .cities
+                        .city-block
+                            p.city Москва
+                        .city-block
+                            p.city Истра (МО)
+                        .city-block
+                            p.city Реутов (МО)
+                        .city-block
+                            p.city Ульяновск
+                        .city-block
+                            p.city Калуга
+                        .city-block
+                            p.city Краснодар
+                        .city-block
+                            p.city Новосибирск
+                        .city-block
+                            p.city Брянск
+                        .city-block
+                            p.city Тюмень
+                        .city-block
+                            p.city Самара
+
+            .col-xs-12.cities-list
+                ul
+                    li.switch_city.cities-list-active
+                        span Москва
+                    li.switch_city
+                        span Истра (МО)
+                    li.switch_city
+                        span Реутов (МО)
+                    li.switch_city
+                        span Ульяновск
+                    li.switch_city
+                        span Калуга
+                    li.switch_city
+                        span Краснодар
+                    li.switch_city
+                        span Новосибирск
+                    li.switch_city
+                        span Брянск
+                    li.switch_city
+                        span Тюмень
+                    li.switch_city
+                        span Самара
+                    li.switch_city.your_city
+                        span Ваш город
+
+            .col-xs-12.search-location
+                .col.col-xs-6
+                    .y-map-wrap
+                        .yandex-map#map
+                        script.
+                            ymaps.ready(function () {
+                                init_contacts(55.8, 37.8);
+                            });
+                            function init_contacts(c, d) {
+                                var myMap = new ymaps.Map("map", {
+                                            //center: [55.8, 37.8],
+                                            center: [c, d],
+                                            zoom: 10
+                                        }, {
+                                            searchControlProvider: 'yandex#search'
+                                        }),
+
+                                        myGeoObject2 = new ymaps.GeoObject({
+                                            draggable: true
+                                        });
+
+                                myMap.geoObjects
+                                        .add(myGeoObject2)
+                                        .add(new ymaps.Placemark([c, d], {}, {
+                                            iconLayout: 'default#image',
+                                            iconImageSize: [28, 37],
+                                            iconImageHref: '../img/heli-icon-red.png'
+                                        }))
+                            }
+                .col.col-xs-6
+                    button(type='submit')
+                        img(src='img/icon-search2.png' alt='иконка поиска')
+                    input(type='text' placeholder='Ваш город')
+                    p Хелипорты России всегда развиваются и расширяют свое присутствие на территории Российской Федерации, хочтите открыть Хелипорт в своем городе?
+                    .open_your_heli
+                        a(href='#') Открыть свой Хелипорт
+                    .closest_heli
+                        p Ближайший Хелипорт:
+                        a(href='#') Москва
+
+            .col-xs-12.address
+                .col.col-xs-6
+                    img(src='img/heli-moscow-big.png' alt='лого')
+                .col.col-xs-6.search
+                    a(href='http://www.heliport-moscow.ru/' target='_blank') www.heliport-moscow.ru
+                    p
+                        | +7(495) 77-000-77 | 8(800) 707-44-77
+                        br
+                        span Схема проезда
+                        br
+                        | Частота 126.7, позывной «Рублево»
+
+            .col-xs-12.video-block
+                .col.col-xs-6
+                    .info-block.info1
+                        p.
+                            Это флагманский центр проекта «Хелипорты России» по созданию крупнейшего в Европе вертолётного мультифункционального комплекса, рассчитанного на базирование более 200 единиц авиационной техники.
+                        p.
+                            «Хелипорт Москва» был открыт в конце 2013 года. Всего за год компания смогла добиться впечатляющих результатов, совершив более 5000 вылетов по разным направлениям и приняв участие в нескольких грандиозных вертолётных экспедициях. На данный момент комплекс существует в light-версии и является полноценным вертолётным центром, осуществляющим широкий спектр услуг в сфере малой гражданской авиации, начиная от аэротакси, продажи и аренды авиатехники, заканчивая квалифицированным обслуживанием и обучением пилотов-любителей.
+                        p.
+                            «Хелипорт Москва» обладает крупнейшим собственным вертолётным парком, в составе которого только новые модели вертолёты ведущих мировых производителей: Bell, AirbusHelicopters, Robinson, AgustaWestland. На территории комплекса есть авиационная техническая база, собственный склад запчастей и отапливаемые ангары с возможностью всесезонного хранения техники. Компания предлагает услуги по покупке и аренде вертолётов, а также эксклюзивные условия кредитования, лизинга и страхования.
+                .col.video.col-xs-6
+                    a(href='#').video_link
+                        img(src='img/helicopter.png' alt='вертолет')
+                        img.icon(src='img/video-icon.png' alt='иконка видео')
+            .col-xs-12.col.services-list
+                h2 Услуги Хелипорта Москвы
+                ul
+                    - var services = {'Аэротуризм':'#','ТО и сервис':'#','Страхование':'#','Тюнинг':'#','Аренда вертолетов':'#','Заправка':'#','Лизинг':'#','Базирование':'#','Продажа вертолетов':'#','Запчасти':'#','Регистрация':'#'}
+                    each val, key in services
+                        li
+                            a(href='#{val}')= key
+
+            .col-xs-12.additional-info
+                p
+                    | Новая вертолетная сеть постоянно растет, охватывая все новые города РФ. Компания «Хелипорты России», при поддержке региональных властей, берет на себя реализацию проектов, предлагая самые эффективные решения для создания современных вертолётных мультифункциональных комплексов с привлечением лучших специалистов.
+                    br
+                    span Мы приглашаем к сотрудничеству всех заинтересованных лиц.
+
+            .col-xs-12.title
+                    h2 О проекте хелипорты России
+            .col-xs-12
+                .column-text
+                    p.column
+                        | «Хелипорты России» - самый амбициозный проект по развитию малой авиации в России. Задача проекта - создание крупнейшей сети вертолетных комплексов по всей стране и внедрение новой экономически эффективной бизнес-модели для формирования вертолетной индустрии. Полноценная готовая инфраструктура, ориентированная на высочайшие стандарты качества, позволит открыть новые возможности для ведущих отраслей экономики.
+                        br
+                        | Проект «Хелипорты России» включает несколько вертолетных комплексов. Идет активное строительство региональных центров в Ульяновске и Калуге, ведутся переговоры по открытию площадок в Казани, Новосибирске, Краснодаре, Сочи, Ростове, Уфе, Владивостоке, Белгороде, Тюмени, Екатеринбурге. В дальнейшем новые комплексы появятся в крупнейших регионах страны.
+
+            .col-xs-12.otryad_A
+                .wrap
+                h3 Вертолетный поисково-спасательный отряд «Ангел»
+                p
+                    | Создан в 2015 году на базе вертолётного центра «Хелипорт Москва» при поддержке
+                    br
+                    | АОПА-Россия. Это добровольная некоммерческая организация, которая занимается поиском пропавших людей с помощью вертолетов.
+                    br
+                    | Совместно с МЧС
+                .img.first-img
+                        img(src='img/otryadA_logo.png' alt='отряд Ангел')
+                .img.second-img
+                        img(src='img/russia_logo.png' alt='отряд Ангел')
+                a(href='#') Узнать подробнее
+
+            .col-xs-12.main-video
+                .img
+                    img(src='img/main-helicopter.png' alt='вертолет')
+                    img.video_link-main(src='img/main-video.png' alt='видео')
+                .be_a_partner
+                    a(href='#') Стать партнером
+
+            .col-xs-12.interactive-menu
+                ul.interactive-menu-slick
+                    li.slick-center1
+                        a(href='#').inter_link Обучение
+                    li
+                        a(href='#').inter_link Продажа
+                    li
+                        a(href='#').inter_link Страхование
+                    li.interactive-menu_active-item
+                        a(href='#').inter_link Поиск и спасение
+                    li
+                        a(href='#').inter_link Заправка
+                    li
+                        a(href='#').inter_link Аренда
+                    li
+                        a(href='#').inter_link ТО и Сервис
+    .container-for-slider.heliports-of-russia.main-page
+            .col-xs-12.main-slider
+                ul.main-slider-list
+                    li.col-xs-12.training
+                        ul.training-list
+                            li
+                                .img
+                                    img(src='img/training-pic1.png' alt='обучение')
+                                .info
+                                    p
+                                        a(href='#') Мастер курс «Почувствуй себя пилотом»
+                                    p 180 минут
+                                    p Robinson R44
+                                    p 100 000 ₽
+                            li
+                                .img
+                                    img(src='img/training-pic1.png' alt='обучение')
+                                .info
+                                    p
+                                        a(href='#') Мастер курс «Почувствуй себя пилотом»
+                                    p 180 минут
+                                    p Robinson R44
+                                    p 100 000 ₽
+                            li
+                                .img
+                                    img(src='img/training-pic1.png' alt='обучение')
+                                .info
+                                    p
+                                        a(href='#') Мастер курс «Почувствуй себя пилотом»
+                                    p 180 минут
+                                    p Robinson R44
+                                    p 100 000 ₽
+                            li
+                                .img
+                                    img(src='img/training-pic1.png' alt='обучение')
+                                .info
+                                    p
+                                        a(href='#') Мастер курс «Почувствуй себя пилотом»
+                                    p 180 минут
+                                    p Robinson R44
+                                    p 100 000 ₽
+
+                        .all_courses
+                            a(href='#') Все курсы обучения
+
+                    li.col-xs-12.sale
+                        ul.helicopters-list
+                            li
+                                .title
+                                    a(href='#') Robinson
+                                .img
+                                    img(src='img/shop_heli1.png' alt='обучение')
+                                table.info
+                                    tr
+                                        td
+                                            a(href='#') R44 Raven I
+                                        td от 616 000 $
+                                    tr
+                                        td
+                                            a(href='#') R44 Raven II
+                                        td от 732 000 $
+                                    tr
+                                        td
+                                            a(href='#') R66 Turbine
+                                        td от 1 340 000 $
+                            li
+                                .title
+                                    a(href='#') Robinson
+                                .img
+                                    img(src='img/shop_heli2.png' alt='обучение')
+                                table.info
+                                    tr
+                                        td
+                                            a(href='#') R44 Raven I
+                                        td от 616 000 $
+                                    tr
+                                        td
+                                            a(href='#') R44 Raven II
+                                        td от 732 000 $
+                                    tr
+                                        td
+                                            a(href='#') R66 Turbine
+                                        td от 1 340 000 $
+                            li
+                                .title
+                                    a(href='#') Robinson
+                                .img
+                                    img(src='img/shop_heli3.png' alt='обучение')
+                                table.info
+                                    tr
+                                        td
+                                            a(href='#') R44 Raven I
+                                        td от 616 000 $
+                                    tr
+                                        td
+                                            a(href='#') R44 Raven II
+                                        td от 732 000 $
+                                    tr
+                                        td
+                                            a(href='#') R66 Turbine
+                                        td от 1 340 000 $
+                            li
+                                .title
+                                    a(href='#') Robinson
+                                .img
+                                    img(src='img/shop_heli4.png' alt='обучение')
+                                table.info
+                                    tr
+                                        td
+                                            a(href='#') R44 Raven I
+                                        td от 616 000 $
+                                    tr
+                                        td
+                                            a(href='#') R44 Raven II
+                                        td от 732 000 $
+                                    tr
+                                        td
+                                            a(href='#') R66 Turbine
+                                        td от 1 340 000 $
+
+                    li.col-xs-12.insurance
+                        .wrap
+                            .col-xs-7
+                                p «Хелипорт Москва» заботится о Вас! Ваши комфорт и безопасность – приоритеты нашей работы.
+                                    br
+                                    | Клиентам «Хелипорт Москва» доступны эксклюзивные условия страхования по всем видам рисков. Наши специалисты сделают все, чтобы Вы чувствовали себя спокойно как в небе, так и на земле.
+                                p Помимо безопасности полетов и нахождения на взлетно-посадочной площадке, мы обеспечиваем страхование всех возможных рисков, которые могут возникнуть при эксплуатации ВС. Наша ответственность за качество производимых работ также застрахована.
+                            .col-xs-5
+                                .title Расчет стоимости страхового полиса ГО и КАСКО
+                                .select-wrap1
+                                    .select
+                                        .offers-select
+                                            select
+                                                option Robinson R44
+                                                option Robinson R45
+                                                option Robinson R46
+                                                option Robinson R47
+                                .select-wrap2
+                                    .select
+                                        .offers-select
+                                            select
+                                                option Гражданская ответственность
+                                                option Гражданская ответственность
+                                                option Гражданская ответственность
+                                p Итоговая сумма:
+                                    span 17 500 ₽
+                                .zayavka
+                                    a(href='#') Подать заявку
+                    li.col-xs-12.otrayd_angel.spasenie
+                        .wrap
+                            h2 Вертолетный поисково-
+                                br
+                                | спасательный отряд
+                                a(href='#') «Ангел»
+                            img(src='img/business-otryadA.png' alt='отряд Ангел')
+                    li.col-xs-12.zapravka
+                        .wrap
+                            .img
+                                img(src='img/zapravka-photo.png' alt='ТО и Сервис')
+                            p На территории «Хелипорт Москва» вы можете заправить свой вертолет вне зависимости от модели и типа двигателя – поршневого или газотурбинного. Заправка осуществляется техническим персоналом «Хелипорт Москва».
+                            table
+                                tr
+                                    td Авиационный бензин 100LL
+                                    td 112 ₽/л
+                                tr
+                                    td Керосин ТС-1
+                                    td 45 ₽/л
+                                tr
+                                    td Выезд авиатехника ГСМ с 20:00 до 8:00, осуществление заправки ВС
+                                    td 2 000 ₽
+                            p Все ночные заправки необходимо сошласовывать
+                                br
+                                | с Руководителем службы ГСМ по номеру:
+                                span +7 910 429-98-24
+
+                    li.col-xs-12.our_services
+                        .wrap
+                            .rent
+                                ul.choose-block
+                                    li
+                                        p Выберите вертолет
+                                        .select
+                                            .offers-select
+                                                select
+                                                    option Robinson R44
+                                                    option Robinson R45
+                                                    option Robinson R46
+                                                    option Robinson R47
+                                    li
+                                        p Кол-во человек
+                                        .select
+                                            .offers-select
+                                                select
+                                                    option 2 человека
+                                                    option 3 человека
+                                                    option 4 человека
+                                                    option 5 человек
+                                    li
+                                        p Откуда
+                                        .select
+                                            .offers-select
+                                                select
+                                                    option Heliport Moscow
+                                                    option Heliport Istra
+                                                    option Heliport Kaluga
+                                                    option Heliport Saratov
+                                    li
+                                        p Куда
+                                        .select
+                                            .offers-select
+                                                select
+                                                    option Рыбинск
+                                                    option Сызрань
+                                                    option Москва
+                                                    option Тверь
+                            .result-block
+                                .title Результат
+                                ul.about-list
+                                    li.img
+                                        img(src='img/become_pilot.png' alt='вертолет')
+                                    li.name
+                                        span Robinson R44
+                                    li
+                                        p 2 человека
+                                        p 4 часа
+                                        p 340 км
+                                    li.price
+                                        span 140 000 ₽
+                                    li.rent
+                                        a(href='#') Арендовать
+
+                            p *цена указана ориентировочная, более точный расчет вам могут предоставить менеджеры Хелипорт-Москва
+                            .route
+                                button(type='submit') Составить свой маршрут
+
+                    li.col-xs-12.serviceTO
+                        .wrap
+                            .col-xs-5
+                                p У каждого вертолета, как и у любого другого вида техники, есть определенный срок проведения необходимого ТО. Например, техническое обслуживание марки Робинсон (в частности Robinson R 44) – это каждые 50 часов полета; капитальный ремонт – от 2200 часов (около 12 лет активного обслуживания). Своевременное техническое обслуживание вертолетов Robinson, Airbus Helicopters и всех остальных марок – гарантия безопасности пилота и пассажиров.
+                                    br
+                                    | Многие считают регулярное ТО «дорогим удовольствием», но по факту полноценное техобслуживание вертолета стоит не таких уж больших денег. Учитывая, что в среднем частные владельцы используют вертолет не более 200 часов в год, сумма годового
+                            .col-xs-7
+                                .img
+                                    img(src='img/serviceTO.png' alt='сервис и ТО')
+
+
+
+
+    .container
+            .col-xs-12.producers-slider
+                .producers-logos-wrap
+                    .border-block.border-block1
+                    .border-block.border-block2
+                    .border-block.border-block3
+                    a(href='#') Производители
+                    .produces-logos
+                        .img-wrap
+                            img(src='img/robinson-logo.png')
+                        .img-wrap
+                            img(src='img/airbus-logo.png')
+                        .img-wrap
+                            img(src='img/be-logo.png')
+                        .img-wrap
+                            img(src='img/agusta-logo.png')
+                        .img-wrap
+                            img(src='img/be-logo.png')
+
+
+
+
+
+                .video-modal
+                    video(poster="img/design/sky.jpg", controls)
+                        source(src="video/sky.webm", type="video/webm")
+                        source(src="video/sky.mp4", type="video/mp4")
+                        source(src="video/sky.ogv", type="video/ogg")
+                .video-modal-main
+                    video(poster="img/design/sky.jpg", controls)
+                        source(src="video/sky.webm", type="video/webm")
+                        source(src="video/sky.mp4", type="video/mp4")
+                        source(src="video/sky.ogv", type="video/ogg")
+
+
+
+

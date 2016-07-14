@@ -1,0 +1,39 @@
+extends layouts/layout_russia
+
+block content
+    .container
+        .social_responsibility.photo-russia
+            .col-xs-12.title.video
+                h2.photo ФОТО
+                -for(var x = 0; x < 9; x++)
+                    .col-xs-4.news-item
+                        .img.gallery_link
+                            a(href='img/basic.jpg' rel='prettyPhoto[gallery]').first-link
+                            a(href='img/business-gallery.png' rel='prettyPhoto[gallery]')
+                            img(src='img/wheel.png' alt='Видео')
+                            .gallery
+                                p.gallery-link 15
+
+                        a.link.bold Заседание комиссии при Президенте
+                .pagination
+                    .wrap
+                        a(href='#').prev —предыдущая
+                        .pages
+                            span Страница
+                            input(type='text' value='1')
+                            span из
+                            span 165
+                        a(href='#').next следующая—
+
+
+
+
+            .video-modal
+                video(poster="img/design/sky.jpg", controls)
+                    source(src="video/sky.webm", type="video/webm")
+                    source(src="video/sky.mp4", type="video/mp4")
+                    source(src="video/sky.ogv", type="video/ogg")
+
+
+
+

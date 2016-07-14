@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700&amp;subset=latin,cyrillic,latin-ext,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/template_styles.css">
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  </head>
+  <body>
+    <header class="container">
+      <div class="row">
+        <nav class="top-nav an">
+          <div class="col"><a href="/" class="logo logo-shop"></a></div>
+          <div class="col basket"><a href="#" class="bsk">
+              <div class="cnt">12</div></a>
+            <div class="price">256 000 ₽</div><a href="#" class="order">Оформить заказ</a>
+          </div>
+          <div class="col">
+            <div class="mini-menu"><a href="#">Вход</a><span>|</span><a href="#">Регистрация</a></div>
+            <!--.mini-menu
+            a(href="#") Профиль
+            span |
+            a(href="#") Whishlist
+            -->
+          </div>
+          <div class="col">
+            <div class="phone"><b>+7 (903) 744-27-70 <br></b><a class="yellow no-link">Заказать звонок</a></div>
+          </div>
+          <div class="col search">
+            <form>
+              <input name="q" type="text" placeholder="Поиск">
+              <input type="submit">
+            </form>
+          </div>
+        </nav>
+        <nav class="shop-menu an">
+          <ul>
+            <li><a href="#">Каталог</a></li>
+            <li><a href="#">Бренды</a></li>
+            <li><a href="#">Доставка и оплата</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="bg-color"></div>
+    <div class="bg-color"></div>
+    <div class="container catalogue">
+      <div class="row">
+        <ul class="breadcrumbs">
+          <li><a href="#"><img src="../img/shop-breadcrumps-home.png"></a></li>
+          <li><a href="#">Каталог</a></li>
+          <li><a href="#">Мужчинам</a></li>
+        </ul>
+        <aside class="col-xs-3">
+          <h2>Каталог</h2>
+          <form>
+            <ul class="products-list">
+              <li class="products-item"><a href="#" class="products-link">Мужчинам</a>
+                <ul class="sub-list">
+                  <li><a href="#">Бейсболки, шапки, шлемы</a></li>
+                  <li><a href="#" class="active">Толстовки, свитеры, джемперы</a></li>
+                  <li><a href="#">Брюки, шорты, бермуды</a></li>
+                  <li><a href="#">Куртки, ветровки, блейзеры</a></li>
+                  <li><a href="#">Поло, футболки</a></li>
+                </ul>
+              </li>
+              <li class="products-item"><a href="#" class="products-link">Женщинам</a></li>
+              <li class="products-item"><a href="#" class="products-link">Детям</a></li>
+              <li class="products-item"><a href="#" class="products-link">Обувь</a></li>
+              <li class="products-item"><a href="#" class="products-link">Оборудование</a></li>
+              <li class="products-item"><a href="#" class="products-link">Принадлежности</a></li>
+              <li class="products-item"><a href="#" class="products-link">Оборудование</a></li>
+              <li class="products-item"><a href="#" class="products-link">Принадлежности</a></li>
+            </ul>
+            <div class="slider">
+              <div class="prices">
+                <fieldset>
+                  <input type="text" id="from" value="500" class="lower_price">
+                  <label for="from" class="price__text">P</label>
+                </fieldset>
+                <fieldset>
+                  <input type="text" id="to" value="500000" class="upper_price">
+                  <label for="to" class="price__text">P</label>
+                </fieldset>
+              </div>
+              <div class="ui-slide">
+                <div id="priceslider"></div>
+              </div>
+            </div>
+            <div class="sizes-block">
+              <ul>
+                <li>
+                  <label>
+                    <input type="checkbox" class="checked_elem">
+                    <div class="checkbox-fake"></div>XXS
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" class="checked_elem">
+                    <div class="checkbox-fake"></div>XS
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" class="checked_elem">
+                    <div class="checkbox-fake"></div>S
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" class="checked_elem">
+                    <div class="checkbox-fake"></div>M
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" class="checked_elem">
+                    <div class="checkbox-fake"></div>L
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" class="checked_elem">
+                    <div class="checkbox-fake"></div>XL
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" class="checked_elem">
+                    <div class="checkbox-fake"></div>XXL
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <div class="brands">
+              <ul>
+                <li>
+                  <label>
+                    <input type="checkbox" class="checked_elem">
+                    <div class="checkbox-fake"></div>Aeronautica Militare
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" class="checked_elem">
+                    <div class="checkbox-fake"></div>Dstrezzed
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" class="checked_elem">
+                    <div class="checkbox-fake"></div>Leatherman
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" class="checked_elem">
+                    <div class="checkbox-fake"></div>Lightspeed Aviation
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" class="checked_elem">
+                    <div class="checkbox-fake"></div>Bose
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" class="checked_elem">
+                    <div class="checkbox-fake"></div>Heliport
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" class="checked_elem">
+                    <div class="checkbox-fake"></div>Aviazione Navale
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" class="checked_elem">
+                    <div class="checkbox-fake"></div>Marina Militare
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" class="checked_elem">
+                    <div class="checkbox-fake"></div>Satorisan
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <div class="sort-out">
+              <label>
+                <input type="checkbox" class="checked_elem">
+                <div class="checkbox-fake"></div>В наличии
+              </label><br>
+              <button type="submit">Подобрать</button>
+            </div>
+          </form>
+        </aside>
+        <div class="main-content col-xs-9">
+          <div class="sort-block">
+            <ul>Сортировать по:&#160;&#160;&#160;&#160;
+              <li><a href="#">дате</a></li>
+              <li><a href="#">цене</a></li>
+              <li><a href="#">популярности</a></li>
+              <li><a href="#">скидке</a></li>
+            </ul>
+          </div>
+          <div class="products-wrap">
+            <div class="catalog-section">
+              <div class="prod">
+                <div class="card">
+                  <div class="prev-list"><img src="img/shop-prod-prev1.png" class="prev"/><img src="img/shop-prod-prev2.png" class="prev"/><img src="img/shop-prod-prev3.png" class="prev"/></div><a href="#" class="img"><img src="img/shop-prod1.png"/></a>
+                  <h3><a href="#">Толстовка<br> Russian Aviation</a></h3>
+                  <div class="prod-info">
+                    <p>Артикул <b>MA0116-513</b></p>
+                    <p>80% хлопок, 20% полиэстер</p>
+                  </div>
+                  <div class="offers-pic">Цвета
+                    <div class="colors">
+                      <div style="background: url(img/shop-color1.png);background-size:cover;" class="color active"></div>
+                      <div style="background: url(img/shop-color2.png);background-size:cover;" class="color"></div>
+                      <div style="background: url(img/shop-color3.png);background-size:cover;" class="color"></div>
+                    </div>
+                  </div>
+                  <div class="offers-select">Размер
+                    <select>
+                      <option>XXXS</option>
+                      <option>XXS</option>
+                      <option>XS</option>
+                      <option>S</option>
+                      <option>M</option>
+                      <option>L</option>
+                      <option>XL</option>
+                      <option>XXL</option>
+                      <option>XXXL</option>
+                    </select>
+                  </div>
+                  <div class="offers-purchase">
+                    <fieldset><span>8 500 ₽</span>
+                      <button type="submit">В корзину</button><img src="./img/shop-favorite.png"/>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+              <div class="prod">
+                <div class="card">
+                  <div class="prev-list"><img src="img/shop-prod-prev1.png" class="prev"/><img src="img/shop-prod-prev2.png" class="prev"/><img src="img/shop-prod-prev3.png" class="prev"/></div><a href="#" class="img"><img src="img/shop-prod-2.png"/></a>
+                  <h3><a href="#">Толстовка<br> Russian Aviation</a></h3>
+                  <div class="prod-info">
+                    <p>Артикул <b>MA0116-513</b></p>
+                    <p>80% хлопок, 20% полиэстер</p>
+                  </div>
+                  <div class="offers-pic">Цвета
+                    <div class="colors">
+                      <div style="background: url(img/shop-color1.png);background-size:cover;" class="color active"></div>
+                      <div style="background: url(img/shop-color2.png);background-size:cover;" class="color"></div>
+                      <div style="background: url(img/shop-color3.png);background-size:cover;" class="color"></div>
+                    </div>
+                  </div>
+                  <div class="offers-select">Размер
+                    <select>
+                      <option>XXXS</option>
+                      <option>XXS</option>
+                      <option>XS</option>
+                      <option>S</option>
+                      <option>M</option>
+                      <option>L</option>
+                      <option>XL</option>
+                      <option>XXL</option>
+                      <option>XXXL</option>
+                    </select>
+                  </div>
+                  <div class="offers-purchase">
+                    <fieldset><span>8 500 ₽</span>
+                      <button type="submit">В корзину</button><img src="./img/shop-favorite.png"/>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+              <div class="prod">
+                <div class="card">
+                  <div class="prev-list"><img src="img/shop-prod-prev1.png" class="prev"/><img src="img/shop-prod-prev2.png" class="prev"/><img src="img/shop-prod-prev3.png" class="prev"/></div><a href="#" class="img"><img src="img/shop-prod1.png"/></a>
+                  <h3><a href="#">Толстовка<br> Russian Aviation</a></h3>
+                  <div class="prod-info">
+                    <p>Артикул <b>MA0116-513</b></p>
+                    <p>80% хлопок, 20% полиэстер</p>
+                  </div>
+                  <div class="offers-pic">Цвета
+                    <div class="colors">
+                      <div style="background: url(img/shop-color1.png);background-size:cover;" class="color active"></div>
+                      <div style="background: url(img/shop-color2.png);background-size:cover;" class="color"></div>
+                      <div style="background: url(img/shop-color3.png);background-size:cover;" class="color"></div>
+                    </div>
+                  </div>
+                  <div class="offers-select">Размер
+                    <select>
+                      <option>XXXS</option>
+                      <option>XXS</option>
+                      <option>XS</option>
+                      <option>S</option>
+                      <option>M</option>
+                      <option>L</option>
+                      <option>XL</option>
+                      <option>XXL</option>
+                      <option>XXXL</option>
+                    </select>
+                  </div>
+                  <div class="offers-purchase">
+                    <fieldset><span>8 500 ₽</span>
+                      <button type="submit">В корзину</button><img src="./img/shop-favorite.png"/>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="catalog-section">
+              <div class="prod">
+                <div class="card">
+                  <div class="prev-list"><img src="img/shop-prod-prev1.png" class="prev"/><img src="img/shop-prod-prev2.png" class="prev"/><img src="img/shop-prod-prev3.png" class="prev"/></div><a href="#" class="img"><img src="img/shop-prod3.png"/></a>
+                  <h3><a href="#">Толстовка<br> Russian Aviation</a></h3>
+                  <div class="prod-info">
+                    <p>Артикул <b>MA0116-513</b></p>
+                    <p>80% хлопок, 20% полиэстер</p>
+                  </div>
+                  <div class="offers-pic">Цвета
+                    <div class="colors">
+                      <div style="background: url(img/shop-color1.png);background-size:cover;" class="color active"></div>
+                      <div style="background: url(img/shop-color2.png);background-size:cover;" class="color"></div>
+                      <div style="background: url(img/shop-color3.png);background-size:cover;" class="color"></div>
+                    </div>
+                  </div>
+                  <div class="offers-select">Размер
+                    <select>
+                      <option>XXXS</option>
+                      <option>XXS</option>
+                      <option>XS</option>
+                      <option>S</option>
+                      <option>M</option>
+                      <option>L</option>
+                      <option>XL</option>
+                      <option>XXL</option>
+                      <option>XXXL</option>
+                    </select>
+                  </div>
+                  <div class="offers-purchase">
+                    <fieldset><span>8 500 ₽</span>
+                      <button type="submit">В корзину</button><img src="./img/shop-favorite.png"/>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+              <div class="prod">
+                <div class="card">
+                  <div class="prev-list"><img src="img/shop-prod-prev1.png" class="prev"/><img src="img/shop-prod-prev2.png" class="prev"/><img src="img/shop-prod-prev3.png" class="prev"/></div><a href="#" class="img"><img src="img/shop-prod1.png"/></a>
+                  <h3><a href="#">Толстовка<br> Russian Aviation</a></h3>
+                  <div class="prod-info">
+                    <p>Артикул <b>MA0116-513</b></p>
+                    <p>80% хлопок, 20% полиэстер</p>
+                  </div>
+                  <div class="offers-pic">Цвета
+                    <div class="colors">
+                      <div style="background: url(img/shop-color1.png);background-size:cover;" class="color active"></div>
+                      <div style="background: url(img/shop-color2.png);background-size:cover;" class="color"></div>
+                      <div style="background: url(img/shop-color3.png);background-size:cover;" class="color"></div>
+                    </div>
+                  </div>
+                  <div class="offers-select">Размер
+                    <select>
+                      <option>XXXS</option>
+                      <option>XXS</option>
+                      <option>XS</option>
+                      <option>S</option>
+                      <option>M</option>
+                      <option>L</option>
+                      <option>XL</option>
+                      <option>XXL</option>
+                      <option>XXXL</option>
+                    </select>
+                  </div>
+                  <div class="offers-purchase">
+                    <fieldset><span>8 500 ₽</span>
+                      <button type="submit">В корзину</button><img src="./img/shop-favorite.png"/>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+              <div class="prod">
+                <div class="card">
+                  <div class="prev-list"><img src="img/shop-prod-prev1.png" class="prev"/><img src="img/shop-prod-prev2.png" class="prev"/><img src="img/shop-prod-prev3.png" class="prev"/></div><a href="#" class="img"><img src="img/shop-prod-2.png"/></a>
+                  <h3><a href="#">Толстовка<br> Russian Aviation</a></h3>
+                  <div class="prod-info">
+                    <p>Артикул <b>MA0116-513</b></p>
+                    <p>80% хлопок, 20% полиэстер</p>
+                  </div>
+                  <div class="offers-pic">Цвета
+                    <div class="colors">
+                      <div style="background: url(img/shop-color1.png);background-size:cover;" class="color active"></div>
+                      <div style="background: url(img/shop-color2.png);background-size:cover;" class="color"></div>
+                      <div style="background: url(img/shop-color3.png);background-size:cover;" class="color"></div>
+                    </div>
+                  </div>
+                  <div class="offers-select">Размер
+                    <select>
+                      <option>XXXS</option>
+                      <option>XXS</option>
+                      <option>XS</option>
+                      <option>S</option>
+                      <option>M</option>
+                      <option>L</option>
+                      <option>XL</option>
+                      <option>XXL</option>
+                      <option>XXXL</option>
+                    </select>
+                  </div>
+                  <div class="offers-purchase">
+                    <fieldset><span>8 500 ₽</span>
+                      <button type="submit">В корзину</button><img src="./img/shop-favorite.png"/>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="catalog-section">
+              <div class="prod">
+                <div class="card">
+                  <div class="prev-list"><img src="img/shop-prod-prev1.png" class="prev"/><img src="img/shop-prod-prev2.png" class="prev"/><img src="img/shop-prod-prev3.png" class="prev"/></div><a href="#" class="img"><img src="img/shop-prod3.png"/></a>
+                  <h3><a href="#">Толстовка<br> Russian Aviation</a></h3>
+                  <div class="prod-info">
+                    <p>Артикул <b>MA0116-513</b></p>
+                    <p>80% хлопок, 20% полиэстер</p>
+                  </div>
+                  <div class="offers-pic">Цвета
+                    <div class="colors">
+                      <div style="background: url(img/shop-color1.png);background-size:cover;" class="color active"></div>
+                      <div style="background: url(img/shop-color2.png);background-size:cover;" class="color"></div>
+                      <div style="background: url(img/shop-color3.png);background-size:cover;" class="color"></div>
+                    </div>
+                  </div>
+                  <div class="offers-select">Размер
+                    <select>
+                      <option>XXXS</option>
+                      <option>XXS</option>
+                      <option>XS</option>
+                      <option>S</option>
+                      <option>M</option>
+                      <option>L</option>
+                      <option>XL</option>
+                      <option>XXL</option>
+                      <option>XXXL</option>
+                    </select>
+                  </div>
+                  <div class="offers-purchase">
+                    <fieldset><span>8 500 ₽</span>
+                      <button type="submit">В корзину</button><img src="./img/shop-favorite.png"/>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+              <div class="prod">
+                <div class="card">
+                  <div class="prev-list"><img src="img/shop-prod-prev1.png" class="prev"/><img src="img/shop-prod-prev2.png" class="prev"/><img src="img/shop-prod-prev3.png" class="prev"/></div><a href="#" class="img"><img src="img/shop-prod1.png"/></a>
+                  <h3><a href="#">Толстовка<br> Russian Aviation</a></h3>
+                  <div class="prod-info">
+                    <p>Артикул <b>MA0116-513</b></p>
+                    <p>80% хлопок, 20% полиэстер</p>
+                  </div>
+                  <div class="offers-pic">Цвета
+                    <div class="colors">
+                      <div style="background: url(img/shop-color1.png);background-size:cover;" class="color active"></div>
+                      <div style="background: url(img/shop-color2.png);background-size:cover;" class="color"></div>
+                      <div style="background: url(img/shop-color3.png);background-size:cover;" class="color"></div>
+                    </div>
+                  </div>
+                  <div class="offers-select">Размер
+                    <select>
+                      <option>XXXS</option>
+                      <option>XXS</option>
+                      <option>XS</option>
+                      <option>S</option>
+                      <option>M</option>
+                      <option>L</option>
+                      <option>XL</option>
+                      <option>XXL</option>
+                      <option>XXXL</option>
+                    </select>
+                  </div>
+                  <div class="offers-purchase">
+                    <fieldset><span>8 500 ₽</span>
+                      <button type="submit">В корзину</button><img src="./img/shop-favorite.png"/>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+              <div class="prod">
+                <div class="card">
+                  <div class="prev-list"><img src="img/shop-prod-prev1.png" class="prev"/><img src="img/shop-prod-prev2.png" class="prev"/><img src="img/shop-prod-prev3.png" class="prev"/></div><a href="#" class="img"><img src="img/shop-prod-2.png"/></a>
+                  <h3><a href="#">Толстовка<br> Russian Aviation</a></h3>
+                  <div class="prod-info">
+                    <p>Артикул <b>MA0116-513</b></p>
+                    <p>80% хлопок, 20% полиэстер</p>
+                  </div>
+                  <div class="offers-pic">Цвета
+                    <div class="colors">
+                      <div style="background: url(img/shop-color1.png);background-size:cover;" class="color active"></div>
+                      <div style="background: url(img/shop-color2.png);background-size:cover;" class="color"></div>
+                      <div style="background: url(img/shop-color3.png);background-size:cover;" class="color"></div>
+                    </div>
+                  </div>
+                  <div class="offers-select">Размер
+                    <select>
+                      <option>XXXS</option>
+                      <option>XXS</option>
+                      <option>XS</option>
+                      <option>S</option>
+                      <option>M</option>
+                      <option>L</option>
+                      <option>XL</option>
+                      <option>XXL</option>
+                      <option>XXXL</option>
+                    </select>
+                  </div>
+                  <div class="offers-purchase">
+                    <fieldset><span>8 500 ₽</span>
+                      <button type="submit">В корзину</button><img src="./img/shop-favorite.png"/>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="pagination">
+              <div class="wrap"><a href="#" class="prev">—предыдущая</a>
+                <div class="pages"><span>Страница</span>
+                  <div>1</div><span>из</span><span>165</span>
+                </div><a href="#" class="next">следующая—</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <video poster="img/design/sky.jpg" class="bg-video">
+      <source src="video/sky.webm" type="video/webm">
+      <source src="video/sky.mp4" type="video/mp4">
+      <source src="video/sky.ogv" type="video/ogg">
+    </video>
+    <div class="video-modal">
+      <video poster="img/design/sky.jpg" controls>
+        <source src="video/sky.webm" type="video/webm">
+        <source src="video/sky.mp4" type="video/mp4">
+        <source src="video/sky.ogv" type="video/ogg">
+      </video>
+    </div>
+    <div class="popup-window feedbackForm">
+      <p>Введите ваше имя и телефон.<br>Мы свяжемся с вами в ближайшее время.</p>
+      <form>
+        <div class="feed-error"></div>
+        <div class="feed-result"></div>
+        <div class="feed-body"></div>
+        <input type="text" placeholder="Ваше имя" class="feed-name your_name">
+        <input type="text" placeholder="+7(___)__-__-__" class="feed-phone your_tel">
+        <input type="hidden" class="feed-comment">
+        <button type="submit">Отправить</button>
+      </form>
+    </div>
+    <footer class="container an">
+      <hr>
+      <div class="foot">
+        <div class="col">
+          <p>500 метров от МКАД по Новорижскому шоссе<br>+7 (495) 77-000-77, 8 (800) 707-44-77 (круглосуточно)</p><a class="map">Схема проезда</a>
+        </div>
+        <div class="col social"><a class="icon-vkontakte"></a><a class="icon-facebook"></a><a class="icon-twitter"></a><a class="icon-instagram"></a><a class="icon-gplus"></a></div>
+        <div class="col search">
+          <form>
+            <input name="q" type="text" placeholder="Поиск">
+            <input type="submit">
+          </form>
+        </div>
+        <div class="col"><a href="#" class="site-selector"><img src="img/design/logorussia.png"></a></div>
+      </div><small>© 2016 Heliport Moscow</small>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>

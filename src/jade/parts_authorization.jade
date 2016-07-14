@@ -1,0 +1,25 @@
+extends layouts/layout_parts
+
+block content
+    .lk.authorization
+        h1 Личный кабинет
+
+        .title Авторизуйтесь
+        form
+            .left-block
+                fieldset
+                    label E-mail:
+                    input(type='text')
+                fieldset
+                    label Пароль:
+                    input(type='text')
+                fieldset
+                    label
+                        input(type="checkbox").checked_elem
+                        .checkbox-fake
+                        | Запомнить меня на этом компьютере
+                fieldset
+                    button(type='submit') Войти
+
+        a(href='#') Регистрация
+        a(href='#') Забыли пароль?
